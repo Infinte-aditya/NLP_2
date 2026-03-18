@@ -1,0 +1,51 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+venv/
+__pycache__/
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Large model and data files
+english_tamil_hindi_glossary.json
+nllb_model/
+uploads
+
+# Dependencies
+node_modules/
+backend/venv/
+__pycache__/
+
+# Large Models & Backups
+nllb_model/
+backend_backup/
+
+# User Uploads & Outputs
+uploads/
+*_out.txt
+*_output.txt
+debug_*.txt
+diag_*.txt
+test_output.txt
+
+# OS files
+.DS_Store
+Thumbs.db

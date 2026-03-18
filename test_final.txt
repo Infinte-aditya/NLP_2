@@ -1,0 +1,124 @@
+﻿python : `torch_dtype` 
+is deprecated! Use 
+`dtype` instead!
+At line:1 char:1
++ python test_nllb.py 
+2>&1 | Out-File 
+-FilePath 
+test_final.txt 
+-Encodin ...
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (`torch_dtype`   
+  i...dtype` instea    
+d!:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+Traceback (most recent 
+call last):
+  File "C:\Users\Arnav 
+Mehta\Desktop\NLP-Autom
+otive-Translation\backe
+nd\pipeline\indic_model
+.py", line 35, in 
+load_indic_model
+    model = AutoModelFo
+rSeq2SeqLM.from_pretrai
+ned(
+            ^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
+^^^^
+  File "C:\Users\Arnav 
+Mehta\AppData\Local\Pro
+grams\Python\Python312\
+Lib\site-packages\trans
+formers\models\auto\aut
+o_factory.py", line 
+374, in from_pretrained
+    return model_class.
+from_pretrained(
+           ^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
+  File "C:\Users\Arnav 
+Mehta\AppData\Local\Pro
+grams\Python\Python312\
+Lib\site-packages\trans
+formers\modeling_utils.
+py", line 4072, in 
+from_pretrained
+    loading_info, 
+disk_offload_index = cl
+s._load_pretrained_mode
+l(model, state_dict, 
+checkpoint_files, 
+load_config)
+                       
+                ^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Arnav 
+Mehta\AppData\Local\Pro
+grams\Python\Python312\
+Lib\site-packages\trans
+formers\modeling_utils.
+py", line 4187, in 
+_load_pretrained_model
+    merged_state_dict.u
+pdate(load_state_dict(c
+kpt_file))
+                       
+      ^^^^^^^^^^^^^^^^^
+^^^^^^^^^
+  File "C:\Users\Arnav 
+Mehta\AppData\Local\Pro
+grams\Python\Python312\
+Lib\site-packages\trans
+formers\modeling_utils.
+py", line 319, in 
+load_state_dict
+    check_torch_load_is
+_safe()
+  File "C:\Users\Arnav 
+Mehta\AppData\Local\Pro
+grams\Python\Python312\
+Lib\site-packages\trans
+formers\utils\import_ut
+ils.py", line 1220, in 
+check_torch_load_is_saf
+e
+    raise ValueError(
+ValueError: Due to a 
+serious vulnerability 
+issue in `torch.load`, 
+even with 
+`weights_only=True`, 
+we now require users 
+to upgrade torch to at 
+least v2.6 in order to 
+use the function. This 
+version restriction 
+does not apply when 
+loading files with 
+safetensors.
+See the vulnerability 
+report here https://nvd
+.nist.gov/vuln/detail/C
+VE-2025-32434
+Using device: cuda
+Testing NLLB-200 Translation to tam_Taml...
+--- Model Initialization Started (Local Folder) ---
+Target Device: cuda
+Model Path: C:\Users\Arnav Mehta\Desktop\NLP-Automotive-Translation\nllb_model
+1. Loading Tokenizer...
+   - Tokenizer loaded successfully.
+2. Loading Model...
+!!! Error loading NLLB-200 model from C:\Users\Arnav Mehta\Desktop\NLP-Automotive-Translation\nllb_model: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+ERROR: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434

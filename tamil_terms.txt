@@ -1,0 +1,5 @@
+Rod Bearing: {'Rod Bearings': 'ராட் பியரிங்ஸ்'}
+Piston Ring: {'Piston Rings': 'பிஸ்டன் ரிங்க்ஸ்'}
+Special tool: {'Special tool': 'ஸ்பெஷல் டூல்', 'Special Tools': 'ஸ்பெஷல் டூல்ஸ்'}
+Piston Pin: {'Piston Pin': 'பிஸ்டன் பின்'}
+Cylinder: {'Cylinder Block': 'சிலின்டர் பிளாக்', 'Cylinder Boring': 'சிலின்டர் போரிங்', 'Cylinder Head': 'சிலின்டர் ஹெட்', 'Cylinder Sleeves': 'சிலின்டர் ஸ்லீவ்ஸ்', 'Cylinder': 'சிலின்டர்', 'Dual Master Cylinder': 'டூயல் மாஸ்டர் சிலின்டர்', 'Inline Cylinder Block': 'இன்லைன் சிலின்டர் பிளாக்', 'Master Cylinder': 'மாஸ்டர் சிலின்டர்', 'Wheel Cylinder': 'வீல் சிலின்டர்', 'Power Cylinder': 'பவர் சிலிண்டர்'}
