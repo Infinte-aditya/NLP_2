@@ -5,6 +5,8 @@ import torch
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 import re
 
+from pathlib import Path
+
 # Monkey-patch: bypass torch version check for loading local .bin files
 # (Safe because we only load from our own trusted local folder)
 try:
@@ -20,7 +22,8 @@ current_model_name = None
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 # Point to the manually downloaded folder
-MODEL_NAME = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "nllb_model")
+MODEL_NAME = "facebook/nllb-200-distilled-600M"
+
 
 def load_indic_model():
     """
@@ -37,15 +40,14 @@ def load_indic_model():
     
     try:
         print("1. Loading Tokenizer...")
-        tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, local_files_only=True)
+        tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
         print("   - Tokenizer loaded successfully.")
 
         print("2. Loading Model...")
         model = AutoModelForSeq2SeqLM.from_pretrained(
             MODEL_NAME, 
             torch_dtype=torch.float16 if DEVICE == "cuda" else torch.float32,
-            low_cpu_mem_usage=True,
-            local_files_only=True
+            low_cpu_mem_usage=True
         ).to(DEVICE)
         print(f"   - Model loaded successfully onto {DEVICE}.")
             

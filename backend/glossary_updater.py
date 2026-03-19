@@ -4,17 +4,15 @@ import os
 from collections import Counter
 from typing import Dict, List, Tuple
 
-# ── Optional dependency ───────────────────────────────────────────────────────
 try:
     from indic_transliteration import sanscript
     from indic_transliteration.transliterate import transliterate as _transliterate
     HAS_INDIC_TRANSLIT = True
 except ImportError:
     HAS_INDIC_TRANSLIT = False
-    print("[GlossaryUpdater] indic-transliteration not found. "
-          "Using phonetic fallback. Run: pip install indic-transliteration")
+    print("[GlossaryUpdater] indic-transliteration not found. Run: pip install indic-transliteration")
 
-# ── Words NLLB handles fine — never auto-add ──────────────────────────────────
+# ── Stopwords — NLLB handles these fine, never auto-add ──────────────────────
 STOPWORDS = {
     "the", "a", "an", "is", "are", "was", "were", "be", "been", "being",
     "and", "or", "but", "in", "on", "at", "to", "for", "of", "with",
@@ -33,9 +31,9 @@ STOPWORDS = {
     "new", "old", "high", "low", "long", "short", "large", "small",
     "type", "part", "area", "end", "case", "line", "point", "level",
     "order", "number", "step", "time", "way", "place", "position",
-    "following", "below", "above", "shown", "figure", "table", "section",
-    "page", "item", "list", "refer", "shown", "used", "using", "when",
-        "damage", "power", "safe", "value", "road", "condition", "signal",
+    "following", "shown", "figure", "table", "section", "page", "item",
+    # Common English words NLLB translates fine — never transliterate these
+    "damage", "power", "safe", "value", "road", "condition", "signal",
     "light", "door", "hill", "even", "mode", "range", "status", "view",
     "complete", "lever", "reading", "running", "engaged", "request",
     "supply", "warning", "error", "limit", "progress", "self", "tune",
@@ -44,34 +42,11 @@ STOPWORDS = {
     "visual", "hard", "generic", "trouble", "driver", "drivers",
     "diagram", "procedure", "confirmation", "revolution", "shifting",
     "overspeed", "cranking", "depressing", "synchronizer", "sleeve",
-    "ignition", "indicator", "operation", "performance"
+    "ignition", "indicator", "operation", "performance", "information",
+    "equipment", "outside", "opened", "stopped", "does", "depressed",
+    "slippage", "stopping", "matched", "engaging", "slipping", "faulty",
+    "creep", "even", "hill", "request", "engaged", "safety",
 }
-
-def _is_valid_term(word: str) -> bool:
-    """
-    Filter out model artifacts and common words before adding to glossary.
-    """
-    # Too short
-    if len(word) < 5:
-        return False
-    # Contains digits — likely a code fragment
-    if any(c.isdigit() for c in word):
-        return False
-    # Looks like a concatenation artifact (camelCase or two words joined)
-    # e.g. 'wiignition', 'frondoor', 'Noignition', 'morevalue'
-    if re.search(r'[a-z][A-Z]', word):   # camelCase
-        return False
-    # Repeated letters (model artifact like 'Driverss')
-    if re.search(r'(.)\1{2,}', word):
-        return False
-    # Contains known bad patterns — prefix concatenations
-    bad_prefixes = ['wi', 'no', 'dc', 'se', 'ad', 'sl', 'fr']
-    if len(word) > 6 and word.lower()[:2] in bad_prefixes:
-        # Check if remainder is a known word (e.g. 'no' + 'ignition')
-        for bp in bad_prefixes:
-            if word.lower().startswith(bp) and word.lower()[len(bp):] in STOPWORDS:
-                return False
-    return True
 
 CODE_PATTERN = re.compile(
     r'\b(?:[A-Z]{1,3}\d{2,}[A-Z0-9]*|[A-Z0-9]{2,}-[A-Z0-9-]+|\d+[A-Z]{2,}\d*)\b'
@@ -79,36 +54,59 @@ CODE_PATTERN = re.compile(
 
 ENGLISH_SURVIVOR_PATTERN = re.compile(r'\b[A-Za-z][a-z]{2,}\b')
 
-# ── Phonetic mapping for transliteration ─────────────────────────────────────
-_PHONETIC_MAP = [
-    ("tion", "shana"), ("sion", "shana"), ("ck",   "k"),
-    ("ph",   "f"),     ("th",   "th"),    ("sh",   "sh"),
-    ("ch",   "ch"),    ("gh",   "g"),     ("wh",   "w"),
-    ("ee",   "ii"),    ("oo",   "uu"),    ("ing",  "ing"),
-    ("ture", "char"),  ("ure",  "ar"),    ("age",  "ej"),
-    ("ive",  "iv"),    ("ble",  "bal"),   ("ple",  "pal"),
-    ("ic",   "ik"),    ("al",   "al"),    ("er",   "ar"),
-    ("or",   "or"),    ("ar",   "ar"),    ("ly",   "lii"),
-]
 
-def _to_itrans(word: str) -> str:
-    result = word.lower()
-    for eng, itr in _PHONETIC_MAP:
-        result = result.replace(eng, itr)
-    return result
+# ── Validation — filter garbage before adding to glossary ────────────────────
+
+def _is_valid_term(word: str) -> bool:
+    """Filter out model artifacts, common words, and concatenation errors."""
+    # Too short to be a useful technical term
+    if len(word) < 6:
+        return False
+    # Contains digits — likely a code fragment
+    if any(c.isdigit() for c in word):
+        return False
+    # camelCase — two words joined by the model e.g. 'frondoor', 'wiignition'
+    if re.search(r'[a-z][A-Z]', word):
+        return False
+    # Repeated letters — model artifact e.g. 'Driverss', 'wiignition'
+    if re.search(r'(.)\1{2,}', word):
+        return False
+    # Prefix concatenation artifacts — e.g. 'Noignition', 'seignition', 'Dcondition'
+    bad_prefixes = ["wi", "no", "dc", "se", "ad", "sl", "fr", "si"]
+    word_lower = word.lower()
+    for bp in bad_prefixes:
+        if word_lower.startswith(bp) and len(word_lower) > len(bp) + 3:
+            remainder = word_lower[len(bp):]
+            if remainder in STOPWORDS or remainder in {
+                "ignition", "condition", "learning", "door", "door"
+            }:
+                return False
+    return True
+
+
+# ── Transliteration ───────────────────────────────────────────────────────────
 
 def transliterate_word(word: str, script: str) -> str:
-    """Transliterate English word to Devanagari (hi) or Tamil (ta)."""
-    if HAS_INDIC_TRANSLIT:
-        try:
-            target = sanscript.DEVANAGARI if script == "hi" else sanscript.TAMIL
-            # Try direct IAST first — works better for English loanwords
-            result = _transliterate(word.lower(), sanscript.IAST, target)
-            if result and result != word.lower() and not result.isascii():
-                return result
-        except Exception:
-            pass
+    """
+    Transliterate an English automotive term into Devanagari or Tamil.
+    Uses indic-transliteration with IAST scheme which handles
+    English loanwords better than ITRANS.
+    """
+    if not HAS_INDIC_TRANSLIT:
+        return word
+
+    try:
+        target = sanscript.DEVANAGARI if script == "hi" else sanscript.TAMIL
+        # IAST handles English loanwords best for automotive terminology
+        result = _transliterate(word.lower(), sanscript.IAST, target)
+        # Only accept if result is actually in the target script (non-ASCII)
+        if result and not result.isascii():
+            return result
+    except Exception:
+        pass
+
     return word  # fallback: keep English
+
 
 def get_both_transliterations(word: str) -> Dict[str, str]:
     return {
@@ -116,7 +114,9 @@ def get_both_transliterations(word: str) -> Dict[str, str]:
         "ta": transliterate_word(word, "ta"),
     }
 
+
 # ── Frequency Tracker ─────────────────────────────────────────────────────────
+
 class FrequencyTracker:
     def __init__(self, path: str):
         self.path = path
@@ -136,9 +136,12 @@ class FrequencyTracker:
         for w in words:
             self.counts[w.lower()] += 1
         self._save()
+        # Return with lowercase keys so lookup is consistent
         return {w.lower(): self.counts[w.lower()] for w in words}
 
+
 # ── GlossaryUpdater ───────────────────────────────────────────────────────────
+
 class GlossaryUpdater:
     THRESHOLD = 2
 
@@ -162,6 +165,7 @@ class GlossaryUpdater:
         return word in self.glossary or word.lower() in self.glossary
 
     def _detect_survivors(self, text: str) -> List[str]:
+        """Find English words that survived in translated output."""
         candidates = ENGLISH_SURVIVOR_PATTERN.findall(text)
         survivors = []
         for word in candidates:
@@ -169,11 +173,13 @@ class GlossaryUpdater:
                 continue
             if CODE_PATTERN.match(word):
                 continue
-            if len(word) < 4:
+            if len(word) < 6:
                 continue
             if word.isupper():
                 continue
             if self._already_in_glossary(word):
+                continue
+            if not _is_valid_term(word):
                 continue
             survivors.append(word)
         return list(set(survivors))
@@ -183,10 +189,6 @@ class GlossaryUpdater:
         translated_text: str,
         tgt_script: str = "hi"
     ) -> Tuple[str, List[str]]:
-        """
-        Call after restore_placeholders() for every translated segment.
-        Returns (cleaned_text, list_of_newly_added_terms)
-        """
         survivors = self._detect_survivors(translated_text)
         if not survivors:
             return translated_text, []
@@ -196,27 +198,32 @@ class GlossaryUpdater:
         result_text = translated_text
 
         for word in survivors:
-            if not _is_valid_term(word):
-                continue
             translit = get_both_transliterations(word)
             replacement = translit[tgt_script]
 
-            # Replace in text immediately
-            result_text = re.sub(
-                r'\b' + re.escape(word) + r'\b',
-                replacement,
-                result_text,
-                flags=re.IGNORECASE
-            )
-
-            # Add to glossary if seen enough times
-            if counts[word.lower()] >= self.THRESHOLD:
-                self.glossary[word] = translit
-                newly_added.append(word)
-                print(
-                    f"[GlossaryUpdater] '{word}' seen {counts[word.lower()]}x "
-                    f"→ added | hi: {translit['hi']} | ta: {translit['ta']}"
+            # Only replace in text if we got actual Indic script
+            if not replacement.isascii():
+                result_text = re.sub(
+                    r'\b' + re.escape(word) + r'\b',
+                    replacement,
+                    result_text,
+                    flags=re.IGNORECASE
                 )
+
+            # Add to glossary only if threshold reached AND transliteration worked
+            if counts[word.lower()] >= self.THRESHOLD:
+                if not translit["hi"].isascii() or not translit["ta"].isascii():
+                    self.glossary[word] = translit
+                    newly_added.append(word)
+                    print(
+                        f"[GlossaryUpdater] '{word}' seen {counts[word.lower()]}x "
+                        f"→ added | hi: {translit['hi']} | ta: {translit['ta']}"
+                    )
+                else:
+                    print(
+                        f"[GlossaryUpdater] '{word}' skipped — "
+                        f"transliteration failed (got English back)"
+                    )
 
         if newly_added:
             self._save_glossary()
@@ -224,7 +231,6 @@ class GlossaryUpdater:
         return result_text, newly_added
 
     def get_pending_terms(self) -> Dict[str, int]:
-        """Words seen at least once but not yet at threshold — useful for review."""
         return {
             word: count
             for word, count in self.tracker.counts.items()

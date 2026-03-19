@@ -6,6 +6,7 @@ import shutil
 import os
 import re
 from typing import Dict
+import torch
 
 from backend.utils.docx_utils import translate_docx
 from backend.utils.xml_utils import translate_xml
@@ -72,7 +73,7 @@ def make_translation_helper(target_lang: str, is_docx: bool = False):
         protected_glossary, _ = classify_terms(full_glossary, target_lang)
 
         final_sentences = []
-        batch_size = 30
+        batch_size = 8 if not torch.cuda.is_available() else 30
         total = len(sentences)
 
         for i in range(0, total, batch_size):
