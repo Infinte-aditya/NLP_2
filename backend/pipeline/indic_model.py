@@ -4,7 +4,6 @@ os.environ["TRANSFORMERS_TORCH_LOAD_SAFE_ONLY"] = "0"
 import torch
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 import re
-from optimum.onnxruntime import ORTModelForSeq2SeqLM
 
 
 from pathlib import Path
@@ -92,7 +91,13 @@ def translate_batch(sentences: list, target_lang_code: str, fast_mode: bool = Fa
         
     # NLLB usage
     tokenizer.src_lang = "eng_Latn"
-    inputs = tokenizer(valid_sentences, return_tensors="pt", padding=True, truncation=True).to(DEVICE)
+    inputs = tokenizer(
+        valid_sentences,
+        return_tensors="pt",
+        padding="longest",       # only pad to longest in batch, not max_length
+        truncation=True,
+        max_length=256,          # truncate inputs longer than 256 tokens
+    ).to(DEVICE)
     
     # Generation parameters — fast_mode trades slight quality for major speed gain
     if num_beams is not None:
@@ -101,7 +106,7 @@ def translate_batch(sentences: list, target_lang_code: str, fast_mode: bool = Fa
         gen_beams = 2
     else:
         gen_beams = 5
-    gen_max_length = 512 if (fast_mode or (num_beams and num_beams <= 2)) else 1024
+    gen_max_length = 256 if (fast_mode or (num_beams and num_beams <= 2)) else 512
 
     try:
         with torch.no_grad():

@@ -3,14 +3,11 @@ import json
 import os
 from collections import Counter
 from typing import Dict, List, Tuple
+import re
+from indic_transliteration import sanscript
+from indic_transliteration.sanscript import transliterate as _transliterate
+import unidecode
 
-try:
-    from indic_transliteration import sanscript
-    from indic_transliteration.sanscript import transliterate as _transliterate
-    HAS_INDIC_TRANSLIT = True
-except ImportError:
-    HAS_INDIC_TRANSLIT = False
-    print("[GlossaryUpdater] indic-transliteration not found. Run: pip install indic-transliteration")
 
 # ── Stopwords — NLLB handles these fine, never auto-add ──────────────────────
 STOPWORDS = {
@@ -83,50 +80,50 @@ def _is_valid_term(word: str) -> bool:
                 return False
     return True
 
-    # Add back the phonetic mapping
-_PHONETIC_MAP = [
-    ("tion", "shana"), ("sion", "shana"), ("ck",   "k"),
-    ("ph",   "f"),     ("th",   "th"),    ("sh",   "sh"),
-    ("ch",   "ch"),    ("gh",   "g"),     ("wh",   "w"),
-    ("ee",   "ii"),    ("oo",   "uu"),    ("ing",  "ing"),
-    ("ture", "char"),  ("ure",  "ar"),    ("age",  "ej"),
-    ("ive",  "iv"),    ("ble",  "bal"),   ("ple",  "pal"),
-    ("ic",   "ik"),    ("al",   "al"),    ("er",   "ar"),
-    ("or",   "or"),    ("ar",   "ar"),    ("ly",   "lii"),
-    ("a",    "a"),     ("e",    "e"),     ("i",    "i"),
-    ("o",    "o"),     ("u",    "u"),
-]
-
-def _to_itrans(word: str) -> str:
-    result = word.lower()
-    for eng, itr in _PHONETIC_MAP:
-        result = result.replace(eng, itr)
-    return result
-
-
 # ── Transliteration ───────────────────────────────────────────────────────────
 
 def transliterate_word(word: str, script: str) -> str:
-    if not HAS_INDIC_TRANSLIT:
+    """Improved transliteration for technical English terms."""
+    if not word or len(word) < 3:
         return word
+
+    word_lower = word.lower()
+
+    # Special handling for common technical/loanwords that indic-transliteration handles poorly
+    technical_mappings = {
+        "voltage": {"hi": "वोल्टेज", "ta": "வோல்டேஜ்"},
+        "connected": {"hi": "कनेक्टेड", "ta": "கனெக்டெட்"},
+        "synchronizer": {"hi": "सिंक्रोनाइज़र", "ta": "சின்க்ரோனைசர்"},
+        # Add more as you see them skipped
+    }
+
+    if word_lower in technical_mappings:
+        return technical_mappings[word_lower][script]
+
     try:
-        itrans_word = _to_itrans(word)
         target = sanscript.DEVANAGARI if script == "hi" else sanscript.TAMIL
-        # ITRANS → target script
-        result = _transliterate(itrans_word, sanscript.ITRANS, target)
+        # First try normal IAST
+        result = _transliterate(word_lower, sanscript.IAST, target)
+        if result and not result.isascii():
+            return result
+
+        # Fallback: remove diacritics and try again (helps with some words)
+        simple = unidecode.unidecode(word_lower)
+        result = _transliterate(simple, sanscript.IAST, target)
         if result and not result.isascii():
             return result
     except Exception:
         pass
+
+    # Ultimate fallback: keep English (better than nothing)
     return word
 
 
-def get_both_transliterations(word: str) -> Dict[str, str]:
+def get_both_transliterations(word: str) -> dict:
     return {
         "hi": transliterate_word(word, "hi"),
         "ta": transliterate_word(word, "ta"),
     }
-
 
 # ── Frequency Tracker ─────────────────────────────────────────────────────────
 
@@ -235,6 +232,7 @@ class GlossaryUpdater:
                 else:
                     print(
                         f"[GlossaryUpdater] '{word}' skipped — "
+                        f"skipped | hi: {translit['hi']} | ta: {translit['ta']} - "
                         f"transliteration failed (got English back)"
                     )
 

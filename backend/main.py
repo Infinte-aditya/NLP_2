@@ -74,7 +74,7 @@ def make_translation_helper(target_lang: str, is_docx: bool = False):
         protected_glossary, _ = classify_terms(full_glossary, target_lang)
 
         final_sentences = [""] * len(sentences)  # pre-allocate result list
-        batch_size = 8 if not torch.cuda.is_available() else 30
+        batch_size = 8 if not torch.cuda.is_available() else 192
         total = len(sentences)
 
         # ── Split into short (≤5 words) and long sentences ───────────────────────
