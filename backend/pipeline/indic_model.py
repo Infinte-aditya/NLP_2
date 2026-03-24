@@ -4,6 +4,8 @@ os.environ["TRANSFORMERS_TORCH_LOAD_SAFE_ONLY"] = "0"
 import torch
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 import re
+from optimum.onnxruntime import ORTModelForSeq2SeqLM
+
 
 from pathlib import Path
 
@@ -50,6 +52,10 @@ def load_indic_model():
             low_cpu_mem_usage=True
         ).to(DEVICE)
         print(f"   - Model loaded successfully onto {DEVICE}.")
+
+        model = torch.quantization.quantize_dynamic(
+            model, {torch.nn.Linear}, dtype=torch.qint8
+        )
             
         model.eval()
         print("--- Model Initialization Complete ---")
@@ -61,7 +67,7 @@ def load_indic_model():
 
     return model, tokenizer
 
-def translate_batch(sentences: list, target_lang_code: str, fast_mode: bool = False) -> list:
+def translate_batch(sentences: list, target_lang_code: str, fast_mode: bool = False, num_beams: int = None) -> list:
     """
     Translates a batch of sentences using NLLB-200.
     target_lang_code: 'tam_Taml', 'hin_Deva'
@@ -89,8 +95,13 @@ def translate_batch(sentences: list, target_lang_code: str, fast_mode: bool = Fa
     inputs = tokenizer(valid_sentences, return_tensors="pt", padding=True, truncation=True).to(DEVICE)
     
     # Generation parameters — fast_mode trades slight quality for major speed gain
-    gen_beams = 2 if fast_mode else 5
-    gen_max_length = 512 if fast_mode else 1024
+    if num_beams is not None:
+        gen_beams = num_beams
+    elif fast_mode:
+        gen_beams = 2
+    else:
+        gen_beams = 5
+    gen_max_length = 512 if (fast_mode or (num_beams and num_beams <= 2)) else 1024
 
     try:
         with torch.no_grad():

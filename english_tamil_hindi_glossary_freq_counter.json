@@ -1,0 +1,19 @@
+{
+  "accumulator": 4,
+  "positions": 1,
+  "select": 1,
+  "selector": 2,
+  "driving": 1,
+  "clearance": 1,
+  "stroke": 1,
+  "engage": 2,
+  "neutral": 1,
+  "programming": 1,
+  "vehicle": 1,
+  "inspection": 1,
+  "general": 1,
+  "precautions": 1,
+  "wrenches": 1,
+  "fasteners": 1,
+  "reassembly": 2
+}

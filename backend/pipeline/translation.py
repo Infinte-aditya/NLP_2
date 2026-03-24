@@ -2,7 +2,7 @@ from typing import List
 # Import our new IndicTrans2 wrapper
 from backend.pipeline.indic_model import translate_batch
 
-def translate_sentences(sentences: List[str], target_lang: str, fast_mode: bool = False) -> List[str]:
+def translate_sentences(sentences: List[str], target_lang: str, fast_mode: bool = False, num_beams: int = None) -> List[str]:
     """
     Translates a list of sentences using IndicTrans2.
     target_lang: 'Tamil' or 'Hindi' or 'ta'/'hi'
@@ -27,4 +27,4 @@ def translate_sentences(sentences: List[str], target_lang: str, fast_mode: bool 
         if 'hindi' in key: target_code = 'hin_Deva'
         elif 'tamil' in key: target_code = 'tam_Taml'
     
-    return translate_batch(sentences, target_code, fast_mode=fast_mode)
+    return translate_batch(sentences, target_code, fast_mode=fast_mode, num_beams=num_beams)

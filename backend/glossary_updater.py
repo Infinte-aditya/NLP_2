@@ -6,7 +6,7 @@ from typing import Dict, List, Tuple
 
 try:
     from indic_transliteration import sanscript
-    from indic_transliteration.transliterate import transliterate as _transliterate
+    from indic_transliteration.sanscript import transliterate as _transliterate
     HAS_INDIC_TRANSLIT = True
 except ImportError:
     HAS_INDIC_TRANSLIT = False
@@ -83,29 +83,42 @@ def _is_valid_term(word: str) -> bool:
                 return False
     return True
 
+    # Add back the phonetic mapping
+_PHONETIC_MAP = [
+    ("tion", "shana"), ("sion", "shana"), ("ck",   "k"),
+    ("ph",   "f"),     ("th",   "th"),    ("sh",   "sh"),
+    ("ch",   "ch"),    ("gh",   "g"),     ("wh",   "w"),
+    ("ee",   "ii"),    ("oo",   "uu"),    ("ing",  "ing"),
+    ("ture", "char"),  ("ure",  "ar"),    ("age",  "ej"),
+    ("ive",  "iv"),    ("ble",  "bal"),   ("ple",  "pal"),
+    ("ic",   "ik"),    ("al",   "al"),    ("er",   "ar"),
+    ("or",   "or"),    ("ar",   "ar"),    ("ly",   "lii"),
+    ("a",    "a"),     ("e",    "e"),     ("i",    "i"),
+    ("o",    "o"),     ("u",    "u"),
+]
+
+def _to_itrans(word: str) -> str:
+    result = word.lower()
+    for eng, itr in _PHONETIC_MAP:
+        result = result.replace(eng, itr)
+    return result
+
 
 # ── Transliteration ───────────────────────────────────────────────────────────
 
 def transliterate_word(word: str, script: str) -> str:
-    """
-    Transliterate an English automotive term into Devanagari or Tamil.
-    Uses indic-transliteration with IAST scheme which handles
-    English loanwords better than ITRANS.
-    """
     if not HAS_INDIC_TRANSLIT:
         return word
-
     try:
+        itrans_word = _to_itrans(word)
         target = sanscript.DEVANAGARI if script == "hi" else sanscript.TAMIL
-        # IAST handles English loanwords best for automotive terminology
-        result = _transliterate(word.lower(), sanscript.IAST, target)
-        # Only accept if result is actually in the target script (non-ASCII)
+        # ITRANS → target script
+        result = _transliterate(itrans_word, sanscript.ITRANS, target)
         if result and not result.isascii():
             return result
     except Exception:
         pass
-
-    return word  # fallback: keep English
+    return word
 
 
 def get_both_transliterations(word: str) -> Dict[str, str]:

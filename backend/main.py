@@ -8,6 +8,7 @@ import re
 from typing import Dict
 import torch
 
+from backend.pipeline.simplification import simplify_text
 from backend.utils.docx_utils import translate_docx
 from backend.utils.xml_utils import translate_xml
 from backend.utils.pdf_gen import generate_pdf
@@ -68,72 +69,95 @@ def make_translation_helper(target_lang: str, is_docx: bool = False):
     tgt_script = "hi" if "hindi" in target_lang.lower() else "ta"
 
     def translation_helper(sentences, lang, progress_callback=None):
-        # Reload glossary fresh at start of each document
+
         full_glossary = load_glossary(GLOSSARY_PATH)
         protected_glossary, _ = classify_terms(full_glossary, target_lang)
 
-        final_sentences = []
+        final_sentences = [""] * len(sentences)  # pre-allocate result list
         batch_size = 8 if not torch.cuda.is_available() else 30
         total = len(sentences)
 
-        for i in range(0, total, batch_size):
-            batch = sentences[i: i + batch_size]
+        # ── Split into short (≤5 words) and long sentences ───────────────────────
+        short_indices, short_sentences = [], []
+        long_indices,  long_sentences  = [], []
 
-            # Step 1: Protect known terms
-            protected_batch, placeholder_maps = [], []
-            for s in batch:
-                prot, ph_map = protect_terms(s, protected_glossary)
-                protected_batch.append(prot)
-                placeholder_maps.append(ph_map)
+        for i, s in enumerate(sentences):
+            if len(s.split()) <= 5:
+                short_indices.append(i)
+                short_sentences.append(s)
+            else:
+                long_indices.append(i)
+                long_sentences.append(s)
 
-            # Step 2: Translate
-            translated_batch = translate_sentences(
-                protected_batch, target_lang=target_lang
-            )
+        print(f"[Pipeline] {len(short_sentences)} short segments (beam=1), "
+            f"{len(long_sentences)} long segments (beam=2)")
 
-            # Step 3: Restore + enforce glossary + auto-update
-            for j, trans_s in enumerate(translated_batch):
-                if not trans_s:
-                    final_sentences.append("")
-                    continue
+        # ── Helper: run one group through the full pipeline ───────────────────────
+        def process_group(group_sentences, group_indices, num_beams):
+            nonlocal full_glossary, protected_glossary
 
-                # Restore placeholders
-                # highlight=True only for docx — renders yellow in Word
-                restored = restore_placeholders(
-                    trans_s,
-                    placeholder_maps[j],
-                    highlight=is_docx
+            for i in range(0, len(group_sentences), batch_size):
+                batch         = group_sentences[i: i + batch_size]
+                batch_indices = group_indices[i: i + batch_size]
+
+                # Step 1: Simplify + Protect
+                protected_batch, placeholder_maps = [], []
+                for s in batch:
+                    simplified = simplify_text(s)
+                    prot, ph_map = protect_terms(simplified, protected_glossary)
+                    protected_batch.append(prot)
+                    placeholder_maps.append(ph_map)
+
+                # Step 2: Translate with the correct beam count
+                translated_batch = translate_sentences(
+                    protected_batch,
+                    target_lang=target_lang,
+                    num_beams=num_beams
                 )
 
-                # Catch surviving English glossary terms
-                restored = apply_glossary_post_translation(
-                    restored, protected_glossary
-                )
+                # Step 3: Restore + enforce glossary + auto-update
+                for j, trans_s in enumerate(translated_batch):
+                    original_idx = batch_indices[j]
 
-                # Auto-detect remaining survivors, transliterate, update glossary
-                restored, new_terms = updater.process(
-                    restored, tgt_script=tgt_script
-                )
+                    if not trans_s:
+                        final_sentences[original_idx] = ""
+                        continue
 
-                # If new terms were added, reload glossary for remaining batches
-                if new_terms:
-                    full_glossary = load_glossary(GLOSSARY_PATH)
-                    protected_glossary, _ = classify_terms(
-                        full_glossary, target_lang
+                    restored = restore_placeholders(
+                        trans_s,
+                        placeholder_maps[j],
+                        highlight=is_docx
                     )
-                    print(f"[Pipeline] Glossary updated: {new_terms}")
 
-                final_sentences.append(restored)
+                    restored = apply_glossary_post_translation(
+                        restored, protected_glossary
+                    )
 
-            if progress_callback:
-                pct = 40 + int((len(final_sentences) / total) * 40)
-                progress_callback(
-                    f"Translating {len(final_sentences)}/{total}...",
-                    min(pct, 79)
-                )
+                    restored, new_terms = updater.process(
+                        restored, tgt_script=tgt_script
+                    )
+
+                    if new_terms:
+                        full_glossary = load_glossary(GLOSSARY_PATH)
+                        protected_glossary, _ = classify_terms(full_glossary, target_lang)
+                        print(f"[Pipeline] Glossary updated: {new_terms}")
+
+                    final_sentences[original_idx] = restored
+
+                # Progress update
+                done = sum(1 for s in final_sentences if s != "")
+                if progress_callback:
+                    pct = 40 + int((done / total) * 40)
+                    progress_callback(
+                        f"Translating {done}/{total}...",
+                        min(pct, 79)
+                    )
+
+        # ── Run both groups ───────────────────────────────────────────────────────
+        process_group(short_sentences, short_indices, num_beams=1)  # greedy
+        process_group(long_sentences,  long_indices,  num_beams=2)  # fast beam
 
         return final_sentences
-
     return translation_helper
 
 # ── Endpoints ─────────────────────────────────────────────────────────────────
