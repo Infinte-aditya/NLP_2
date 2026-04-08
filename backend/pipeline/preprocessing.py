@@ -18,17 +18,15 @@ def load_glossary(path: str) -> Dict[str, Dict[str, str]]:
     return glossary
 
 def classify_terms(glossary: Dict[str, Dict[str, str]], target_lang: str) -> Tuple[Dict[str, str], Dict[str, str]]:
-    """
-    Splits glossary into PROTECTED and PREFERRED for the specific target language.
-    target_lang: 'ta' (Tamil) or 'hi' (Hindi)
-    
-    UPDATE: User wants strict enforcement. ALL terms are now PROTECTED.
-    """
     protected = {}
-    preferred = {} # Kept empty for compatibility or future use
     
-    # Map 'Tamil' -> 'ta', 'Hindi' -> 'hi' if full names passed, or assume code
-    lang_code = 'ta' if 'tamil' in target_lang.lower() else 'hi' if 'hindi' in target_lang.lower() else 'ta'
+    target_lower = target_lang.lower()
+    if any(x in target_lower for x in ('malay', 'ms', 'bahasa')):
+        lang_code = 'ms'
+    elif 'hindi' in target_lower or target_lower == 'hi':
+        lang_code = 'hi'
+    else:
+        lang_code = 'ta'
 
     for term, translations in glossary.items():
         if lang_code not in translations:
@@ -36,14 +34,13 @@ def classify_terms(glossary: Dict[str, Dict[str, str]], target_lang: str) -> Tup
             
         trans_value = translations[lang_code]
         
-        # Clean Hindi values: remove parenthetical english e.g. "एअर बॅग(Air Bag)" -> "एअर बॅग"
-        if lang_code == 'hi':
-            trans_value = re.sub(r'\s*\(.*?\)', '', trans_value).strip()
+        # NEW: For Malay we want the English term itself
+        if lang_code == 'ms' and trans_value == term:
+            protected[term] = term          # protect original English
+        else:
+            protected[term] = trans_value
 
-        # Always protect
-        protected[term] = trans_value
-            
-    return protected, preferred
+    return protected, {}
 
 def segment_text(text: str) -> List[str]:
     """Segments text into sentences using NLTK."""

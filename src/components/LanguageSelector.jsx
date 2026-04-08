@@ -1,7 +1,7 @@
 import React from 'react';
 
 const languages = [
-    'Hindi', 'Tamil', 'Telugu', 'Malayalam', 'Kannada'
+    'Hindi', 'Tamil', 'Telugu', 'Malayalam', 'Kannada','Malay'
 ];
 
 const LanguageSelector = ({ selectedLanguages, onChange }) => {

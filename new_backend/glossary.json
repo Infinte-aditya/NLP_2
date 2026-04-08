@@ -1,0 +1,1558 @@
+{
+  "Air Bag": {
+    "ta": "ஏர் பேக்",
+    "hi": "एअर बॅग(Air Bag)"
+  },
+  "Air Conditioning": {
+    "ta": "ஏர் கண்டிஷனிங்",
+    "hi": "एअर कंडीशनर (Air Conditioning)"
+  },
+  "Air/Fuel Ratio": {
+    "ta": "ஏர்/ஃப்யூயல் ரேஷியோ",
+    "hi": "एअर फ्युएल रेशो(Air/Fuel Ratio )"
+  },
+  "Alignment": {
+    "ta": "அலைன்மென்ட்",
+    "hi": "अलाइनमेंट (Alignment )"
+  },
+  "Alternating Current": {
+    "ta": "ஆல்டர்நேடிங் கரண்ட்",
+    "hi": "अल्टरनेटिंग करंट(Alternating Current)"
+  },
+  "Alternator": {
+    "ta": "ஆல்டர்நேடர்",
+    "hi": "अल्टरनेटर(Alternator )"
+  },
+  "Antifreeze": {
+    "ta": "ஆன்டிஃப்ரீஸ்",
+    "hi": "अँटीफ्रिज(Antifreeze )"
+  },
+  "Axle": {
+    "ta": "ஆக்ஸில்",
+    "hi": "एक्सल(Axle)"
+  },
+  "Backfire": {
+    "ta": "பேக்ஃபயர்",
+    "hi": "बॅकफायर(Backfire )"
+  },
+  "Backing Plate": {
+    "ta": "பேக்கிங் ப்ளேட்",
+    "hi": "बॅकिंग प्लेट(Backing Plate )"
+  },
+  "Backpressure": {
+    "ta": "பேக்ப்ரெஷர்",
+    "hi": "बॅकप्रेशर(Backpressure )"
+  },
+  "Balance Shaft": {
+    "ta": "பேலன்ஸ் ஷாப்ட்",
+    "hi": "बॅलन्स शाफ्ट(Balance Shaft )"
+  },
+  "Barometric Pressure Sensor": {
+    "ta": "பேரோமெட்ரிக் பிரெஷ்ஷர் சென்சார்",
+    "hi": "बॅरोमेट्रिक प्रेशर सेन्सर(Barometric Pressure Sensor )"
+  },
+  "Battery Cables": {
+    "ta": "பாட்டரி கேபிள்ஸ்",
+    "hi": "बॅटरी केबल्स(Battery Cables )"
+  },
+  "Battery Terminals": {
+    "ta": "பாட்டரி டெர்மினல்ஸ்",
+    "hi": "बॅटरी टर्मिनल्स(Battery Terminals )"
+  },
+  "Battery": {
+    "ta": "பாட்டரி",
+    "hi": "बॅटरी(Battery )"
+  },
+  "Bleeder Hose": {
+    "ta": "ப்ளீடர் ஹோஸ்",
+    "hi": "ब्लीडर होस(Bleeder Hose )"
+  },
+  "Bleeder Screw": {
+    "ta": "ப்ளீடர் ஸ்க்ரூ",
+    "hi": "ब्लेडर स्क्रू(Bleeder Screw )"
+  },
+  "Blowby": {
+    "ta": "ப்ளோபை",
+    "hi": "ब्लोबाय(Blowby )"
+  },
+  "Boot /boots": {
+    "ta": "பூட்/பூட்ஸ்",
+    "hi": "बूट / बूट्स (Boot /boots)"
+  },
+  "Brake": {
+    "ta": "ப்ரேக்",
+    "hi": "ब्रेक(Brake)"
+  },
+  "Brake Fade": {
+    "ta": "ப்ரேக் ஃபேட்",
+    "hi": "ब्रेक फेड(Brake Fade )"
+  },
+  "Brake Fluid": {
+    "ta": "ப்ரேக் ப்ளூயிட்",
+    "hi": "ब्रेक फ्लुइड(Brake Fluid )"
+  },
+  "Brake Hose": {
+    "ta": "ப்ரேக் ஹோஸ்",
+    "hi": "ब्रेक होज(Brake Hose )"
+  },
+  "Brake Linings": {
+    "ta": "ப்ரேக் லைனிங்ஸ்",
+    "hi": "ब्रेक लाइनिंग्ज(Brake Linings )"
+  },
+  "Brake Noise": {
+    "ta": "ப்ரேக் நாய்ஸ்",
+    "hi": "ब्रेक  नॉइज (Brake Noise )"
+  },
+  "Brake Pad": {
+    "ta": "ப்ரேக் பாட்",
+    "hi": "ब्रेक पॅड(Brake Pad )"
+  },
+  "Brake Warning Light": {
+    "ta": "ப்ரேக் வார்னிங் லைட்",
+    "hi": "ब्रेक वॉर्निंग लाईट(Brake Warning Light )"
+  },
+  "Brakes": {
+    "ta": "ப்ரேக்ஸ்",
+    "hi": "ब्रेक्स (Brakes)"
+  },
+  "BTDC (Before Top Dead Center)": {
+    "ta": "பி டீ டி சி(பிஃபோர் டாப் டெட் சென்டர்)",
+    "hi": "बीटीडीसी (बिफोर टॉप डेड सेंटर)(BTDC (Before Top Dead Center) )"
+  },
+  "Bypass Hose": {
+    "ta": "பைபாஸ் ஹோஸ்",
+    "hi": "बायपास होस(Bypass Hose )"
+  },
+  "Caliper Piston": {
+    "ta": "கேலிபர் பிஸ்டன்",
+    "hi": "कॅलिपर पिस्टन(Caliper Piston )"
+  },
+  "Caliper": {
+    "ta": "கேலிபர்",
+    "hi": "कॅलिपर(Caliper )"
+  },
+  "Camber": {
+    "ta": "கேம்பர்",
+    "hi": "कॅंबर(Camber )"
+  },
+  "Camshaft Position Sensor": {
+    "ta": "கம்ஷாப்ட் பொசிஷன் சென்சார்",
+    "hi": "कॅमशाफ्ट पोझिशन सेन्सर(Camshaft Position Sensor )"
+  },
+  "Camshaft": {
+    "ta": "கேம்ஷாப்ட்",
+    "hi": "कॅमशाफ्ट(Camshaft )"
+  },
+  "Canister Purge Control Valve": {
+    "ta": "கேனிஸ்டர் பர்ஜ் கண்ட்ரோல் வால்வ்",
+    "hi": "कॅनिस्टर पर्ज कंट्रोल वॉल्व(Canister Purge Control Valve )"
+  },
+  "Carbon Dioxide (Co2)": {
+    "ta": "கார்பன் டைஆக்ஸைடு (சிஓ2)",
+    "hi": "कार्बन डायऑक्साइड (सीओ 2)(Carbon Dioxide (Co2) )"
+  },
+  "Carbon Monoxide (Co)": {
+    "ta": "கார்பன் மோனாக்சைடு (சிஓ)",
+    "hi": "कार्बन मोनोऑक्साइड (सीओ)(Carbon Monoxide (Co) )"
+  },
+  "Caster": {
+    "ta": "காஸ்டர்",
+    "hi": "कस्टर (Caster )"
+  },
+  "Catalyst": {
+    "ta": "கேட்டலிஸ்ட்",
+    "hi": "कॅटलिस्ट (Catalyst )"
+  },
+  "Catalytic Converter": {
+    "ta": "கேட்டலிடிக் கன்வெர்டர்",
+    "hi": "कॅटलिटिक कन्व्हर्टर (Catalytic Converter )"
+  },
+  "Charcoal Canister": {
+    "ta": "சார்கோல் கேனிஸ்டர்",
+    "hi": "चारकोल कॅनस्टर(Charcoal Canister )"
+  },
+  "Check Engine Light": {
+    "ta": "செக் என்ஜின் லைட்",
+    "hi": "चेक इंजिन लाइट (Check Engine Light )"
+  },
+  "Closed Loop": {
+    "ta": "க்ளோஸ்ட் லூப்",
+    "hi": "क्लोजड लूप(Closed Loop )"
+  },
+  "Clutch Disk": {
+    "ta": "க்ளட்ச் டிஸ்க்",
+    "hi": "क्लच डिस्क(Clutch Disk )"
+  },
+  "Clutch": {
+    "ta": "க்ளட்ச்",
+    "hi": "क्लच(Clutch )"
+  },
+  "Coil Springs": {
+    "ta": "காயில் ஸ்பிரிங்ஸ்",
+    "hi": "कोइल स्प्रिंग्स(Coil Springs )"
+  },
+  "Cold Start": {
+    "ta": "கோல்ட் ஸ்டார்ட்",
+    "hi": "कोल्ड स्टार्ट(Cold Start )"
+  },
+  "Combustion Chamber": {
+    "ta": "கம்பூஷன் சேம்பர்",
+    "hi": "कंबस्चन  चेंबर(Combustion Chamber )"
+  },
+  "Compression Gauge": {
+    "ta": "கம்ப்ரெஷ்ஷன் கேஜ்",
+    "hi": "कंप्रेशन  गॉज(Compression Gauge )"
+  },
+  "Compression Ratio": {
+    "ta": "கம்ப்ரெஷ்ஷன் ரேஷியோ",
+    "hi": "कंप्रेशन रेशो(Compression Ratio )"
+  },
+  "Compression Rings": {
+    "ta": "கம்ப்ரெஷ்ஷன் ரிங்க்ஸ்",
+    "hi": "कंप्रेशन रिंग(Compression Rings )"
+  },
+  "Compression Test": {
+    "ta": "கம்ப்ரெஷ்ஷன் டெஸ்ட்",
+    "hi": "कंप्रेशन टेस्ट(Compression Test )"
+  },
+  "Compressor Clutch": {
+    "ta": "கம்ப்ரெஸ்ஸர் க்ளட்ச்",
+    "hi": "कंप्रेसर क्लच(Compressor Clutch )"
+  },
+  "Compressor": {
+    "ta": "கம்ப்ரெஸ்ஸர்",
+    "hi": "कंप्रेसर(Compressor )"
+  },
+  "Condenser": {
+    "ta": "கண்டென்சர்",
+    "hi": "कंडेनसर(Condenser )"
+  },
+  "Connecting Rod": {
+    "ta": "கனெக்டிங் ராட்",
+    "hi": "कनेक्टिंग रॉड(Connecting Rod )"
+  },
+  "Connector": {
+    "ta": "கனெக்டர்",
+    "hi": "कनेक्टर(Connector )"
+  },
+  "Continuity": {
+    "ta": "கண்டின்யூட்டி",
+    "hi": "कंटिन्युटी(Continuity )"
+  },
+  "Control Module": {
+    "ta": "கண்ட்ரோல் மாட்யூல்",
+    "hi": "कंट्रोल मॉड्यूल(Control Module )"
+  },
+  "Coolant Reservoir": {
+    "ta": "கூலன்ட் ரிசர்வாயர்",
+    "hi": "कूलंट रीझर्वायर   (Coolant Reservoir )"
+  },
+  "Coolant Temperature Sensor": {
+    "ta": "கூலன்ட் டெம்பரேச்சர் சென்சார்",
+    "hi": "कूलंट टेंपरेचर सेंसर(Coolant Temperature Sensor )"
+  },
+  "Coolant": {
+    "ta": "கூலன்ட்",
+    "hi": "कूलंट(Coolant )"
+  },
+  "Cooling Fan": {
+    "ta": "கூலிங் ஃபேன்",
+    "hi": "फॅन(Cooling Fan )"
+  },
+  "Cooling Jackets": {
+    "ta": "கூலிங் ஜாக்கெட்ஸ்",
+    "hi": "कूलिंग जॅकेट्स(Cooling Jackets )"
+  },
+  "Cooling System": {
+    "ta": "கூலிங் சிஸ்டம்",
+    "hi": "कुलिंग सिस्टीम(Cooling System )"
+  },
+  "Crankshaft": {
+    "ta": "க்ராங்க்ஷாப்ட்",
+    "hi": "क्रँकशाफ्ट(Crankshaft )"
+  },
+  "Current": {
+    "ta": "கரண்ட்",
+    "hi": "करंट(Current )"
+  },
+  "Cylinder Block": {
+    "ta": "சிலின்டர் பிளாக்",
+    "hi": "सिलिंडर ब्लॉक(Cylinder Block )"
+  },
+  "Cylinder Boring": {
+    "ta": "சிலின்டர் போரிங்",
+    "hi": "सिलिंडर बोरिंग(Cylinder Boring )"
+  },
+  "Cylinder Head": {
+    "ta": "சிலின்டர் ஹெட்",
+    "hi": "सिलिंडर हेड(Cylinder Head )"
+  },
+  "Cylinder Sleeves": {
+    "ta": "சிலின்டர் ஸ்லீவ்ஸ்",
+    "hi": "सिलिंडर स्लीव्ज (Cylinder Sleeves )"
+  },
+  "Cylinder": {
+    "ta": "சிலின்டர்",
+    "hi": "सिलेंडर(Cylinder )"
+  },
+  "Data Trouble Codes  (DTC)": {
+    "ta": "டேட்டா ட்ரபிள் கோட்ஸ் (டி டீ சி)",
+    "hi": "डेटा ट्रबल कोड (डीटीसी)(Data Trouble Codes  (DTC))"
+  },
+  "Desiccant": {
+    "ta": "டெசிக்கன்ட்",
+    "hi": "डेसीकॅँट(Desiccant )"
+  },
+  "Diagnose": {
+    "ta": "டயக்னோஸ்",
+    "hi": "डायग्नोज(Diagnose)"
+  },
+  "Diagnostic": {
+    "ta": "டயக்னோஸ்டிக்",
+    "hi": "डायग्नोस्टिक(Diagnostic)"
+  },
+  "Dial Indicator": {
+    "ta": "டயல் இண்டிகேட்டர்",
+    "hi": "डायल इंडिकेटर(Dial Indicator )"
+  },
+  "Differential": {
+    "ta": "டிபரென்ஷியல்",
+    "hi": "डिफरन्शियल (Differential )"
+  },
+  "Direct Current (DC)": {
+    "ta": "டைரக்ட் கரண்ட் (டிசி)",
+    "hi": "डायरेक्ट करंट (डीसी)(Direct Current (DC) )"
+  },
+  "Disc Brakes": {
+    "ta": "டிஸ்க் ப்ரேக்ஸ்",
+    "hi": "डिस्क ब्रेक(Disc Brakes )"
+  },
+  "DOT (Department of Transportation)": {
+    "ta": "டி ஓ டீ (டிபார்ட்மெண்ட் ஆஃப் ட்ரான்ஸ்போர்ட்டேஷன்)",
+    "hi": "डीओटी (वाहतूक विभाग)(DOT (Department of Transportation) )"
+  },
+  "Dot 3 Brake Fluid": {
+    "ta": "டாட் 3 ப்ரேக் ப்ளூயிட்",
+    "hi": "डॉट 3 ब्रेक फ्लुइड(Dot 3 Brake Fluid )"
+  },
+  "Drive shaft": {
+    "ta": "டிரைவ் ஷாப்ட்",
+    "hi": "ड्राइव्ह शाफ्ट(Drive shaft)"
+  },
+  "Driveline": {
+    "ta": "டிரைவ்லைன்",
+    "hi": "ड्रायव्हलाईन(Driveline )"
+  },
+  "Driveshaft": {
+    "ta": "டிரைவ்ஷாப்ட்",
+    "hi": "ड्राइव्हशाफ्ट(Driveshaft )"
+  },
+  "Drum": {
+    "ta": "டிரம்",
+    "hi": "ड्रम(Drum )"
+  },
+  "Dual Master Cylinder": {
+    "ta": "டூயல் மாஸ்டர் சிலின்டர்",
+    "hi": "ड्युअल मास्टर सिलिंडर(Dual Master Cylinder )"
+  },
+  "Dual Overhead Camshaft": {
+    "ta": "டூயல் ஓவர்ஹெட் கேம்ஷாப்ட்",
+    "hi": "ड्युअल ओव्हरहेड कॅमशाफ्ट(Dual Overhead Camshaft)"
+  },
+  "Electrical System": {
+    "ta": "எலெக்ட்ரிகல் சிஸ்டம்",
+    "hi": "इलेक्ट्रिकल सिस्टिम(Electrical System )"
+  },
+  "Electrode": {
+    "ta": "எலெக்ட்ரோட்",
+    "hi": "इलेक्ट्रोड(Electrode )"
+  },
+  "Electrolyte": {
+    "ta": "எலெக்ட்ரோலைட்",
+    "hi": "इलेक्ट्रोलाइट(Electrolyte )"
+  },
+  "Electronic Fuel Injection": {
+    "ta": "எலெக்ட்ரானிக் ப்யூயல் இன்ஜெக்ஷன்",
+    "hi": "इलेक्ट्रॉनिक फ्युएल इंजेक्शन(Electronic Fuel Injection)"
+  },
+  "Electronics": {
+    "ta": "எலெக்ட்ரானிக்ஸ்",
+    "hi": "इलेक्ट्रॉनिक्स(Electronics )"
+  },
+  "Emissions Control": {
+    "ta": "எமிஷன் கண்ட்ரோல்",
+    "hi": "इमिशन कंट्रोल(Emissions Control )"
+  },
+  "Emissions Testing": {
+    "ta": "எமிஷன் டெஸ்டிங்",
+    "hi": "इमिशन टेस्टिंग(Emissions Testing )"
+  },
+  "Energy Absorbers": {
+    "ta": "எனர்ஜி அப்சார்பர்ஸ்",
+    "hi": "एनर्जी ॲब्सोर्बर्स(Energy Absorbers )"
+  },
+  "Engine Dynamometer": {
+    "ta": "என்ஜின் டைனமோமீட்டர்",
+    "hi": "इंजिन डायनामोमीटर(Engine Dynamometer )"
+  },
+  "Engine Performance & Troubleshsooting": {
+    "ta": "என்ஜின் பெர்பார்மன்ஸ் & ட்ரபிள்ஷூட்டிங்",
+    "hi": "इंजिन परफॉर्मन्स आणि ट्रबलशूटिंग(Engine Performance & Troubleshsooting )"
+  },
+  "Engine": {
+    "ta": "என்ஜின்",
+    "hi": "इंजिन(Engine )"
+  },
+  "Ethylene Glycol": {
+    "ta": "எத்திலீன் க்ளைக்கால்",
+    "hi": "इथिलीन ग्लायकॉल(Ethylene Glycol)"
+  },
+  "Evaporator": {
+    "ta": "எவாப்பரேட்டார்",
+    "hi": "एवापोरेटर (Evaporator )"
+  },
+  "Exhaust Analyzer": {
+    "ta": "எக்ஸாஸ்ட் அனலைஸர்",
+    "hi": "एक्झॉस्ट ऍनालायझर (Exhaust Analyzer )"
+  },
+  "Exhaust Gas Recirculation": {
+    "ta": "எக்ஸாஸ்ட் கேஸ் ரீசர்க்குலேஷன்",
+    "hi": "एक्झॉस्ट गॅस रिसर्क्युलेशन(Exhaust Gas Recirculation)"
+  },
+  "Exhaust Manifold Gasket": {
+    "ta": "எக்ஸாஸ்ட் மேனிபோல்ட் கேஸ்கட்",
+    "hi": "एक्झॉस्ट मनिफोल्ड गॅस्केट(Exhaust Manifold Gasket )"
+  },
+  "Exhaust Manifold": {
+    "ta": "எக்ஸாஸ்ட் மேனிபோல்ட்",
+    "hi": "एक्सहॉस्ट  मॅनीफोल्ड(Exhaust Manifold )"
+  },
+  "Exhaust Pipe": {
+    "ta": "எக்ஸாஸ்ட் பைப்",
+    "hi": "एक्झॉस्ट पाईप(Exhaust Pipe )"
+  },
+  "Exhaust System": {
+    "ta": "எக்ஸாஸ்ட் சிஸ்டம்",
+    "hi": "एक्झॉस्ट सिस्टीम (Exhaust System )"
+  },
+  "Exhaust Valve": {
+    "ta": "எக்ஸாஸ்ட் வால்வ்",
+    "hi": "एक्झॉस्ट  वॉल्व(Exhaust Valve )"
+  },
+  "Fixed Calipers": {
+    "ta": "பிக்செட் கேலிப்பர்ஸ்",
+    "hi": "फिक्स्ड  कॅलिपर(Fixed Calipers )"
+  },
+  "Flaring Tool": {
+    "ta": "ஃப்லேரிங் டூல்",
+    "hi": "फ्लेअरिंग टूल (Flaring Tool )"
+  },
+  "Floating Calipers": {
+    "ta": "ப்லோட்டிங் கேலிப்பர்ஸ்",
+    "hi": "फ्लोटिंग कॅलिपर(Floating Calipers )"
+  },
+  "Fluid Reservoir": {
+    "ta": "ப்ளூயிட் ரிசர்வாயர்",
+    "hi": "फ्लुइड रीझर्व्हायर (Fluid Reservoir )"
+  },
+  "Flywheel": {
+    "ta": "ஃப்ளைவீல்",
+    "hi": "फ्लायव्हील(Flywheel )"
+  },
+  "Fuel Filter": {
+    "ta": "ப்யூயல் பில்ட்டர்",
+    "hi": "फ्युएल  फिल्टर(Fuel Filter )"
+  },
+  "Fuel Injector": {
+    "ta": "ப்யூயல் இன்ஜக்ட்டர்",
+    "hi": "फ्युएल इंजेक्टर(Fuel Injector )"
+  },
+  "Fuel Pressure Regulator": {
+    "ta": "ப்யூயல் ப்ரெஷ்ஷர் ரெகுலேட்டர்",
+    "hi": "फ्युएल प्रेशर रेग्युलेटर(Fuel Pressure Regulator )"
+  },
+  "Fuel Pump Rail": {
+    "ta": "ப்யூயல் பம்ப் ரயில்",
+    "hi": "फ्युएल पंप रेल(Fuel Pump Rail )"
+  },
+  "Fuel Pump": {
+    "ta": "ப்யூயல் பம்ப்",
+    "hi": "फ्युएल पंप(Fuel Pump )"
+  },
+  "Fuel System": {
+    "ta": "ப்யூயல் சிஸ்டம்",
+    "hi": "फ्युएल सिस्टीम(Fuel System )"
+  },
+  "Fuse": {
+    "ta": "ஃப்யூஸ்",
+    "hi": "फ्यूज(Fuse )"
+  },
+  "Fusible Link": {
+    "ta": "ஃப்யூஸபில் லிங்க்",
+    "hi": "फ्युजिबल लिंक(Fusible Link )"
+  },
+  "Gasket": {
+    "ta": "கேஸ்கட்",
+    "hi": "गॅस्केट(Gasket )"
+  },
+  "Gasoline": {
+    "ta": "கேஸோலைன்",
+    "hi": "गॅसोलीन(Gasoline )"
+  },
+  "Grease": {
+    "ta": "க்ரீஸ்",
+    "hi": "ग्रीस(Grease )"
+  },
+  "Ground": {
+    "ta": "கிரௌண்ட்",
+    "hi": "ग्राउंड(Ground )"
+  },
+  "Head Bolts": {
+    "ta": "ஹெட் போல்ட்ஸ்",
+    "hi": "हेड बोल्ट्स(Head Bolts )"
+  },
+  "Head Gasket": {
+    "ta": "ஹெட் கேஸ்கட்",
+    "hi": "हेड गॅस्केट(Head Gasket )"
+  },
+  "Heater Control Valve": {
+    "ta": "ஹீட்டர் கண்ட்ரோல் வால்வ்",
+    "hi": "हीटर कंट्रोल वॉल्व(Heater Control Valve )"
+  },
+  "Heater Core": {
+    "ta": "ஹீட்டர் கோர்",
+    "hi": "हीटर कोअर(Heater Core )"
+  },
+  "Heater Hose": {
+    "ta": "ஹீட்டர் ஹோஸ்",
+    "hi": "हीटर होस(Heater Hose )"
+  },
+  "Horsepower": {
+    "ta": "ஹார்ஸ்பவர்",
+    "hi": "हॉर्स  पॉवर(Horsepower )"
+  },
+  "Hose": {
+    "ta": "ஹோஸ்",
+    "hi": "होस(Hose )"
+  },
+  "HVAC": {
+    "ta": "எச்.வி.ஏ.சி.",
+    "hi": "एचव्हीएसी(HVAC)"
+  },
+  "Hydraulic Lash Adjusters": {
+    "ta": "ஹைட்ராலிக் லாஷ் அட்ஜஸ்டர்ஸ்",
+    "hi": "हायड्रोलिक लॅश ऍडजस्टर्स(Hydraulic Lash Adjusters )"
+  },
+  "Hydraulic Lifters": {
+    "ta": "ஹைட்ராலிக் லிப்டர்ஸ்",
+    "hi": "हायड्रोलिक लिफ्टर्स(Hydraulic Lifters )"
+  },
+  "Hydraulic Pressure": {
+    "ta": "ஹைட்ராலிக் ப்ரெஷ்ஷர்",
+    "hi": "हायड्रोलिक प्रेशर(Hydraulic Pressure )"
+  },
+  "Hydrocarbons (HC)": {
+    "ta": "ஹைட்ரோகார்பன்ஸ் (எச்.சி)",
+    "hi": "हायड्रोकार्बन्स (एचसी)(Hydrocarbons (HC) )"
+  },
+  "Idle Air Control Valve": {
+    "ta": "ஐடில் ஏர் கண்ட்ரோல் வால்வ்",
+    "hi": "आयडल एअर कंट्रोल वॉल्व(Idle Air Control Valve)"
+  },
+  "Idle Jets": {
+    "ta": "ஐடல் ஜெட்ஸ்",
+    "hi": "आयडल जेट्स(Idle Jets )"
+  },
+  "Idle Mixture": {
+    "ta": "ஐடல் மிக்ஸர்",
+    "hi": "आयडल मिक्श्चर (Idle Mixture )"
+  },
+  "Idle Speed": {
+    "ta": "ஐடல் ஸ்பீட்",
+    "hi": "आयडल स्पीड (Idle Speed )"
+  },
+  "Ignition Cables": {
+    "ta": "இக்னிஷன் கேபிள்ஸ்",
+    "hi": "इग्निशन केबल्स(Ignition Cables )"
+  },
+  "Ignition Coil": {
+    "ta": "இக்னிஷன் காயில்",
+    "hi": "इग्निशन कॉइल(Ignition Coil )"
+  },
+  "Ignition Scope": {
+    "ta": "இக்னிஷன் ஸ்கோப்",
+    "hi": "इग्निशन स्कोप(Ignition Scope )"
+  },
+  "Ignition Switch": {
+    "ta": "இக்னிஷன் சுவிட்ச்",
+    "hi": "इग्निशन स्विच(Ignition Switch )"
+  },
+  "Ignition System": {
+    "ta": "இக்னிஷன் சிஸ்டம்",
+    "hi": "इग्निशन सिस्टम(Ignition System )"
+  },
+  "Ignition Timing": {
+    "ta": "இக்னிஷன் டைமிங்",
+    "hi": "इग्निशन टाइमिंग(Ignition Timing )"
+  },
+  "Impact Wrench": {
+    "ta": "இம்பாக்ட் ரென்ஞ்",
+    "hi": "इम्पॅक्ट व्रेंच (Impact Wrench )"
+  },
+  "Inline Cylinder Block": {
+    "ta": "இன்லைன் சிலின்டர் பிளாக்",
+    "hi": "इनलाइन सिलिंडर ब्लॉक(Inline Cylinder Block )"
+  },
+  "Instrument Panel": {
+    "ta": "இன்ஸ்ட்ருமென்ட் பேனல்",
+    "hi": "इंस्ट्रूमेंट पॅनेल(Instrument Panel )"
+  },
+  "Intake Manifold": {
+    "ta": "இன்டேக் மேனிஃபோல்ட்",
+    "hi": "इंटेक  मनिफोल्ड(Intake Manifold )"
+  },
+  "Intake Valve": {
+    "ta": "இன்டேக் வால்வ்",
+    "hi": "इंटेक वॉल्व(Intake Valve )"
+  },
+  "Integrated Circuit (IC)": {
+    "ta": "இன்டக்ரேட்டட் சர்க்யூட் (ஐசி)",
+    "hi": "इंटीग्रेटेड सर्किट (आयसी)(Integrated Circuit (IC))"
+  },
+  "Intercooler": {
+    "ta": "இன்டர்கூலர்",
+    "hi": "इंटरकुलर(Intercooler )"
+  },
+  "ISO (International Standards Organization)": {
+    "ta": "ஐஎஸ்ஓ (இன்டர்நேஷனல் ஸ்டாண்டர்ட்ஸ் ஆர்கனைசேஷன்)",
+    "hi": "आयएसओ (इंटरनॅशनल स्टँडर्ड्स ऑरगनायझेशन)(ISO (International Standards Organization) )"
+  },
+  "Journals": {
+    "ta": "ஜெர்னல்ஸ்",
+    "hi": "जर्नल(Journals )"
+  },
+  "Jump Start": {
+    "ta": "ஜம்ப் ஸ்டார்ட்",
+    "hi": "जंप स्टार्ट (Jump Start )"
+  },
+  "King Pin Inclination": {
+    "ta": "கிங் பின் இன்க்லிநேஷன்",
+    "hi": "किंग पिन  इंक्लीनेशन(King Pin Inclination)"
+  },
+  "Knock Sensor": {
+    "ta": "நாக் சென்சார்",
+    "hi": "नॉक सेंसर(Knock Sensor )"
+  },
+  "Lash Adjusters": {
+    "ta": "லாஷ் அட்ஜஸ்ட்டர்ஸ்",
+    "hi": "लॅश अडजस्टर्स(Lash Adjusters )"
+  },
+  "Lean Mixture": {
+    "ta": "லீன் மிக்ஸர்",
+    "hi": "लीन मिक्स्चर(Lean Mixture )"
+  },
+  "Light Emitting Diode (LED)": {
+    "ta": "லைட் எமிட்டிங் டயோட் (எல்ஈடி)",
+    "hi": "लाइट एमिटिंग डायोड (एलईडी)(Light Emitting Diode (LED) )"
+  },
+  "Long Term Fuel Trim": {
+    "ta": "லாங் டெர்ம் ப்யூயல் ட்ரிம்",
+    "hi": "लॉंग टर्म  फ्यूल ट्रिम(Long Term Fuel Trim)"
+  },
+  "Lubricants": {
+    "ta": "லூப்ரிகண்ட்",
+    "hi": "लुब्रिकँट(Lubricants )"
+  },
+  "Lubrication": {
+    "ta": "லூப்ரிகேஷன்",
+    "hi": "लुब्रीकेशन (Lubrication)"
+  },
+  "Macpherson Struts": {
+    "ta": "மேக்பர்சன் ஸ்ட்ரட்ஸ்",
+    "hi": "मॅकफेरसन स्ट्रुट्स(Macpherson Struts )"
+  },
+  "Main Bearings": {
+    "ta": "மெயின் பியரிங்ஸ்",
+    "hi": "मेन बियरिंग्ज(Main Bearings )"
+  },
+  "Manifold Absolute Pressure Sensor (MAP)": {
+    "ta": "மேனிஃபோல்ட் அப்ஸல்யூட் ப்ரெஷ்ஷர் சென்சார் (எம் ஏ பி)",
+    "hi": "मनिफोल्ड  ॲबसोल्यूट प्रेशर सेंसर (एमएपी)(Manifold Absolute Pressure Sensor (MAP) )"
+  },
+  "Manual Bleeding": {
+    "ta": "மானுவல் ப்ளீடிங்",
+    "hi": "मॅन्युअल ब्लीडिंग (Manual Bleeding )"
+  },
+  "Manual Transmission": {
+    "ta": "மானுவல் ட்ரான்ஸ்மிஷன்",
+    "hi": "मॅन्युअल ट्रान्समिशन(Manual Transmission )"
+  },
+  "Mass Air flow Sensor": {
+    "ta": "மாஸ் ஏர் ப்ளோ சென்சார்",
+    "hi": "मास एअरफ्लो सेन्सर(Mass Air flow Sensor )"
+  },
+  "Mass Airflow Sensor": {
+    "ta": "மாஸ் ஏர்ப்ளோ சென்சார்",
+    "hi": "मास एअरफ्लो सेन्सर(Mass Airflow Sensor )"
+  },
+  "Master Cylinder": {
+    "ta": "மாஸ்டர் சிலின்டர்",
+    "hi": "मास्टर सिलेंडर(Master Cylinder )"
+  },
+  "Misfire": {
+    "ta": "மிஸ்பயர்",
+    "hi": "मिसफायर(Misfire )"
+  },
+  "Muffler": {
+    "ta": "மஃப்ளர்",
+    "hi": "मफलर(Muffler )"
+  },
+  "Negative Camber": {
+    "ta": "நெகட்டிவ் கேம்பர்",
+    "hi": "निगेटिव्ह कॅंबर(Negative Camber )"
+  },
+  "Negative Caster": {
+    "ta": "நெகட்டிவ் காஸ்டர்",
+    "hi": "निगेटिव्ह कॅस्टर(Negative Caster )"
+  },
+  "OBD II(Onboard Diagnostics II)": {
+    "ta": "ஓபிடி II (ஆன்போர்டு டயக்னோஸ்டிக்ஸ் II)",
+    "hi": "ओबीडी  (ऑनबोर्ड डायग्नोस्टिक्स )(OBD II(Onboard Diagnostics II) )"
+  },
+  "Octane": {
+    "ta": "ஆக்டேன்",
+    "hi": "ऑक्टेन(Octane )"
+  },
+  "Ohmmeter": {
+    "ta": "ஓம்மீட்டர்",
+    "hi": "ओहमिटर(Ohmmeter )"
+  },
+  "Ohms": {
+    "ta": "ஓம்ஸ்",
+    "hi": "ओहम्स (Ohms )"
+  },
+  "Oil Consumption": {
+    "ta": "ஆயில் கன்சம்ப்ஷன்",
+    "hi": "ऑईल कंझंशन (Oil Consumption )"
+  },
+  "Oil Cooler": {
+    "ta": "ஆயில் கூலர்",
+    "hi": "ऑईल कूलर(Oil Cooler )"
+  },
+  "Oil Filter": {
+    "ta": "ஆயில் பில்ட்டர்",
+    "hi": "ऑईल फिल्टर(Oil Filter )"
+  },
+  "Oil Pan Gasket": {
+    "ta": "ஆயில் பான் கேஸ்கட்",
+    "hi": "ऑईल  पॅन गॅस्केट(Oil Pan Gasket )"
+  },
+  "Oil Pan": {
+    "ta": "ஆயில் பான்",
+    "hi": "ऑईल पॅन(Oil Pan )"
+  },
+  "Oil Pump": {
+    "ta": "ஆயில் பம்ப்",
+    "hi": "ऑईल  पंप(Oil Pump )"
+  },
+  "Oil Ring": {
+    "ta": "ஆயில் ரிங்",
+    "hi": "ऑईल  रिंग(Oil Ring )"
+  },
+  "Open Loop": {
+    "ta": "ஓபன் லூப்",
+    "hi": "ओपन लूप(Open Loop )"
+  },
+  "Oscilloscope": {
+    "ta": "ஆக்சில்லோஸ்கூப்",
+    "hi": "ऑस्सीलोस्कोप(Oscilloscope )"
+  },
+  "Overheating": {
+    "ta": "ஓவர்ஹீட்டிங்",
+    "hi": "ओव्हरहीटिंग(Overheating )"
+  },
+  "Oxides Of Nitrogen (Nox)": {
+    "ta": "ஆக்சைட்ஸ் ஆஃப் நைட்ரஜன் (என்.ஓ.எக்ஸ்)",
+    "hi": "ऑक्साईडस  ऑफ नायट्रोजन (नॉक्स) (Oxides Of Nitrogen (Nox) )"
+  },
+  "Oxygen Sensor": {
+    "ta": "ஆக்ஸிஜன் சென்சார்",
+    "hi": "ऑक्सिजन सेन्सर(Oxygen Sensor)"
+  },
+  "Parallel Circuit": {
+    "ta": "பாரலெல் சர்க்யூட்",
+    "hi": "पॅरलल सर्किट(Parallel Circuit )"
+  },
+  "parking": {
+    "ta": "பார்கிங்",
+    "hi": "पार्किंग(parking)"
+  },
+  "Parking Brake": {
+    "ta": "பார்கிங் ப்ரேக்",
+    "hi": "पार्किंग ब्रेक(Parking Brake )"
+  },
+  "Pinion Gear": {
+    "ta": "பினியன் கியர்",
+    "hi": "पिनियन गियर(Pinion Gear )"
+  },
+  "Piston Rings": {
+    "ta": "பிஸ்டன் ரிங்க்ஸ்",
+    "hi": "पिस्टन रिंग्ज(Piston Rings )"
+  },
+  "Piston": {
+    "ta": "பிஸ்டன்",
+    "hi": "पिस्टन(Piston )"
+  },
+  "Positive Camber": {
+    "ta": "பாசிடிவ் கேம்பர்",
+    "hi": "पॉझिटिव्ह कॅम्बर(Positive Camber )"
+  },
+  "Positive Caster": {
+    "ta": "பாசிடிவ் கேஸ்டர்",
+    "hi": "पॉझिटिव्ह कास्टर(Positive Caster )"
+  },
+  "Positive Crankcase Ventilation (PCV)": {
+    "ta": "பாசிடிவ் க்ராங்கேஸ் வென்டிலேஷன் (பீ சி வி)",
+    "hi": "पॉझिटिव्ह क्रॅंककेस व्हेंटिलेशन (पीसीव्ही)(Positive Crankcase Ventilation (PCV))"
+  },
+  "Pressure Plate": {
+    "ta": "ப்ரெஷ்ஷர் ப்ளேட்",
+    "hi": "प्रेशर प्लेट(Pressure Plate )"
+  },
+  "Proportioning Valve": {
+    "ta": "ப்ரபோர்ஷனிங் வால்வ்",
+    "hi": "प्रोपोर्शनिंग वॉल्व(Proportioning Valve )"
+  },
+  "Pushrods": {
+    "ta": "புஷ்ராட்ஸ்",
+    "hi": "पुश रॉड्स(Pushrods )"
+  },
+  "R-134A": {
+    "ta": "ஆர்-134ஏ",
+    "hi": "आर-134 ए(R-134A )"
+  },
+  "Rack & Pinion Steering": {
+    "ta": "ரேக் & பினியன் ஸ்டீரிங்",
+    "hi": "रॅक आणि पिनियन स्टीयरिंग(Rack & Pinion Steering )"
+  },
+  "Radial Tire": {
+    "ta": "ரேடியல் டயர்",
+    "hi": "रेडियल टायर(Radial Tire )"
+  },
+  "Radiator Cap": {
+    "ta": "ரேடியேட்டர் கேப்",
+    "hi": "रेडिएटर कॅप(Radiator Cap )"
+  },
+  "Radiator Hose": {
+    "ta": "ரேடியேட்டர் ஹோஸ்",
+    "hi": "रेडिएटर होस(Radiator Hose )"
+  },
+  "Radiator": {
+    "ta": "ரேடியேட்டர்",
+    "hi": "रेडिएटर(Radiator )"
+  },
+  "Ratchet Wrench": {
+    "ta": "ரேட்செட் ரென்ஞ்",
+    "hi": "रॅचेट व्रेंच(Ratchet Wrench )"
+  },
+  "Rear Axle Steer": {
+    "ta": "ரியர் ஆக்ஸில் ஸ்டீர்",
+    "hi": "रियर एक्सल स्टीयर(Rear Axle Steer )"
+  },
+  "Rear Toe": {
+    "ta": "ரியர் டோ",
+    "hi": "रियर टो(Rear Toe )"
+  },
+  "Receiver-Drier": {
+    "ta": "ரிசீவர்-ட்ரையர்",
+    "hi": "रिसिव्हर-ड्रायव्हर(Receiver-Drier )"
+  },
+  "Refrigerant": {
+    "ta": "ரெப்ரிஜரெண்ட்",
+    "hi": "रेफ्रिजरेंट(Refrigerant )"
+  },
+  "Regulator": {
+    "ta": "ரெகுலேட்டர்",
+    "hi": "रेग्युलेटर- ड्रायर(Regulator )"
+  },
+  "Relay": {
+    "ta": "ரிலே",
+    "hi": "रिले (Relay )"
+  },
+  "Resistance": {
+    "ta": "ரெசிஸ்டன்ஸ்",
+    "hi": "रेजिस्टन्स(Resistance )"
+  },
+  "Resonator": {
+    "ta": "ரெசனேட்டர்",
+    "hi": "रेझोनेटर(Resonator )"
+  },
+  "Return Springs": {
+    "ta": "ரிடர்ன் ஸ்ப்ரிங்ஸ்",
+    "hi": "रिटर्न स्प्रिंग्स(Return Springs )"
+  },
+  "Rich Mixture": {
+    "ta": "ரிச் மிக்ஸர்",
+    "hi": "रीच मिक्स्चर(Rich Mixture )"
+  },
+  "Ring End Gap": {
+    "ta": "ரிங் எண்டு கேப்",
+    "hi": "रिंग एंड गॅप(Ring End Gap )"
+  },
+  "Ring Gear": {
+    "ta": "ரிங் கியர்",
+    "hi": "रिंग गियर(Ring Gear )"
+  },
+  "Rocker Arms": {
+    "ta": "ராக்கர் ஆர்ம்ஸ்",
+    "hi": "रॉकर आर्म्स(Rocker Arms )"
+  },
+  "Rod Bearings": {
+    "ta": "ராட் பியரிங்ஸ்",
+    "hi": "रॉड बियरिंग्ज(Rod Bearings )"
+  },
+  "Safety": {
+    "ta": "சேப்டி",
+    "hi": "सेफ्टी (Safety )"
+  },
+  "Scan Tool": {
+    "ta": "ஸ்கேன் டூல்ஸ்",
+    "hi": "स्कॅन टूल(Scan Tool )"
+  },
+  "Sealed Beams": {
+    "ta": "சீல்ட் பீம்ஸ்",
+    "hi": "सीलड  बीम्स(Sealed Beams )"
+  },
+  "Seat Belt": {
+    "ta": "சீட் பெல்ட்",
+    "hi": "सीटबेल्ट (Seat Belt)"
+  },
+  "Sensor": {
+    "ta": "சென்சார்",
+    "hi": "सेन्सर(Sensor )"
+  },
+  "Series Circuit": {
+    "ta": "சீரீஸ் சர்க்யூட்",
+    "hi": "सिरीज सर्किट(Series Circuit )"
+  },
+  "Setback": {
+    "ta": "செட்பேக்",
+    "hi": "सेटबॅक(Setback )"
+  },
+  "Shock Absorbers": {
+    "ta": "ஷாக் அப்சார்பர்ஸ்",
+    "hi": "शॉक  ॲब्सोर्बर्स(Shock Absorbers )"
+  },
+  "Shoes": {
+    "ta": "ஷூஸ்",
+    "hi": "शूज(Shoes )"
+  },
+  "Short Term Fuel Trim": {
+    "ta": "ஷார்ட் டெர்ம் ப்யூயல் ட்ரிம்",
+    "hi": "शॉर्ट टर्म फ्युएल ट्रिम(Short Term Fuel Trim)"
+  },
+  "Solenoid": {
+    "ta": "சாலிநாய்ட்",
+    "hi": "सोलिनॉइड(Solenoid )"
+  },
+  "Solution": {
+    "ta": "சொல்யூஷன்",
+    "hi": "सोल्युशन(Solution)"
+  },
+  "Spark Plug": {
+    "ta": "ஸ்பார்க் பிளக்",
+    "hi": "स्पार्क प्लग(Spark Plug )"
+  },
+  "Spark Retard": {
+    "ta": "ஸ்பார்க் ரிடார்ட்",
+    "hi": "स्पार्क रिटार्ड(Spark Retard )"
+  },
+  "Special tool": {
+    "ta": "ஸ்பெஷல் டூல்",
+    "hi": "स्पेशल टूर(Special tool)"
+  },
+  "Specification": {
+    "ta": "ஸ்பெசிபிகேஷன்",
+    "hi": "स्पेसिफिकेशन(Specification)"
+  },
+  "Stalling": {
+    "ta": "ஸ்டாலிங்",
+    "hi": "स्टॉलिंग(Stalling )"
+  },
+  "Starter": {
+    "ta": "ஸ்டார்ட்டர்",
+    "hi": "स्टार्टर(Starter )"
+  },
+  "steering": {
+    "ta": "ஸ்டீரிங்",
+    "hi": "स्टीयरिंग(steering)"
+  },
+  "Steering Axis Inclination": {
+    "ta": "ஸ்டீரிங் ஆக்சிஸ் இன்க்லினேஷன்",
+    "hi": "स्टिअरिंग एक्सेस इंक्लीनेशन(Steering Axis Inclination)"
+  },
+  "Steering, Suspension & Chassis": {
+    "ta": "ஸ்டீரிங், சஸ்பென்சன் & சேசிஸ்",
+    "hi": "स्टिअरिंग, सस्पेन्शन आणि चेसिस(Steering, Suspension & Chassis )"
+  },
+  "Stoichiometric (Air/Fuel Ratio)": {
+    "ta": "ஸ்டோசியோமெட்ரிக் (ஏர்/ப்யூயல் ரேஷியோ)",
+    "hi": "स्टॉइचोमेट्रिक ( एअर/ फ्युएल रेशो)(Stoichiometric (Air/Fuel Ratio) )"
+  },
+  "Struts": {
+    "ta": "ஸ்ட்ரட்ஸ்",
+    "hi": "स्ट्रट्स(Struts )"
+  },
+  "Supplemental Restraint System": {
+    "ta": "சப்ளிமென்டல் ரெஸ்ட்ரெய்ன்ட் சிஸ்டம்",
+    "hi": "सप्लीमेंटल रीस्ट्रेन सिस्टीम(Supplemental Restraint System)"
+  },
+  "suspension": {
+    "ta": "சஸ்பென்சன்",
+    "hi": "सस्पेन्शन(suspension)"
+  },
+  "Synthetic Oil": {
+    "ta": "சிந்தெடிக் ஆயில்",
+    "hi": "सिंथेटिक  ऑईल(Synthetic Oil )"
+  },
+  "System": {
+    "ta": "சிஸ்டம்",
+    "hi": "सिस्टीम (System)"
+  },
+  "Tailpipe": {
+    "ta": "டெயில்பைப்",
+    "hi": "टेलिपीप(Tailpipe )"
+  },
+  "Tappets": {
+    "ta": "டப்பெட்ஸ்",
+    "hi": "टॅपेट्स(Tappets )"
+  },
+  "TDC (Top Dead Center)": {
+    "ta": "டி.டி.சி. (டாப் டெட் சென்டர்)",
+    "hi": "टीडीसी (टॉप डेड सेंटर)(TDC (Top Dead Center) )"
+  },
+  "Test Light": {
+    "ta": "டெஸ்ட் லைட்",
+    "hi": "टेस्ट लाईट (Test Light )"
+  },
+  "Thermal Vacuum Switch (TVS)": {
+    "ta": "தெர்மல் வாக்யூம் சுவிட்ச் (டிவிஎஸ்)",
+    "hi": "थर्मल व्हॅक्यूम स्विच (टीव्हीएस)(Thermal Vacuum Switch (TVS))"
+  },
+  "Thermostat": {
+    "ta": "தெர்மோஸ்டாட்",
+    "hi": "थर्मोस्टॅट(Thermostat )"
+  },
+  "Three-Way Catalytic Converter (TWC)": {
+    "ta": "த்ரீ-வே கேடலிடிக் கன்வெர்ட்டர் (டி.டபள்யு.சி)",
+    "hi": "थ्री-वे कॅटलिटिक कनव्हरटर (टीडब्ल्यूसी)(Three-Way Catalytic Converter (TWC))"
+  },
+  "Throttle Position Sensor": {
+    "ta": "த்ராட்டில் பொசிஷன் சென்சார்",
+    "hi": "थ्रॉटल पोजिशन सेन्सर(Throttle Position Sensor)"
+  },
+  "Tie Rod End": {
+    "ta": "டை ராட் எண்டு",
+    "hi": "टाय रॉड एंड(Tie Rod End )"
+  },
+  "Tie Rod": {
+    "ta": "டை ராட்",
+    "hi": "टाय रॉड(Tie Rod )"
+  },
+  "Tightening torque": {
+    "ta": "டைட்டனிங் டார்க்",
+    "hi": "टाईटनिंग  टॉर्क(Tightening torque)"
+  },
+  "Timing Advance": {
+    "ta": "டைமிங் அட்வான்ஸ்",
+    "hi": "टाइमिंग ॲडव्हान्स(Timing Advance )"
+  },
+  "Timing Belt": {
+    "ta": "டைமிங் பெல்ட்",
+    "hi": "टाइमिंग बेल्ट(Timing Belt )"
+  },
+  "Timing Chain Cover": {
+    "ta": "டைமிங் செயின் கவர்",
+    "hi": "टाइमिंग चेन कव्हर(Timing Chain Cover )"
+  },
+  "Timing Chain": {
+    "ta": "டைமிங் செயின்",
+    "hi": "टाइमिंग चेन (Timing Chain )"
+  },
+  "Timing Gears": {
+    "ta": "டைமிங் கியர்ஸ்",
+    "hi": "टाइमिंग गियर(Timing Gears )"
+  },
+  "Timing Light": {
+    "ta": "டைமிங் லைட்",
+    "hi": "टाइमिंग लाईट(Timing Light )"
+  },
+  "Tires": {
+    "ta": "டயர்ஸ்",
+    "hi": "टायर्स(Tires )"
+  },
+  "Toe": {
+    "ta": "டோ",
+    "hi": "टो(Toe )"
+  },
+  "Toe-In": {
+    "ta": "டோ-இன்",
+    "hi": "टो-इन(Toe-In )"
+  },
+  "Toe-Out": {
+    "ta": "டோ-அவுட்",
+    "hi": "टो-आउट(Toe-Out )"
+  },
+  "Tools & Equipment": {
+    "ta": "டூல்ஸ்&எக்யுப்மென்ட்",
+    "hi": "टूल्स अँड इक्विपमेंट्स(Tools & Equipment )"
+  },
+  "Torque Wrench": {
+    "ta": "டார்க் ரென்ஞ்",
+    "hi": "टॉर्क व्रेंच(Torque Wrench )"
+  },
+  "Torque": {
+    "ta": "டார்க்",
+    "hi": "टॉर्क(Torque )"
+  },
+  "Torsion Bar": {
+    "ta": "டார்ஷன் பார்",
+    "hi": "टॉर्शन बार(Torsion Bar )"
+  },
+  "Total Toe": {
+    "ta": "டோட்டல் டோ",
+    "hi": "टोटल टो(Total Toe )"
+  },
+  "Traction Control": {
+    "ta": "ட்ராக்ஷன் கண்ட்ரோல்",
+    "hi": "ट्रॅक्शन कंट्रोल(Traction Control )"
+  },
+  "Transaxle": {
+    "ta": "ட்ரான்ஸாக்ஸில்",
+    "hi": "ट्रान्सॅक्सल(Transaxle )"
+  },
+  "Transmission": {
+    "ta": "ட்ரான்ஸ்மிஷன்",
+    "hi": "ट्रान्समिशन (Transmission )"
+  },
+  "Tripod CV Joint": {
+    "ta": "ட்ரைப்பாட் சி.வி ஜாயின்ட்",
+    "hi": "ट्रायपॉड सीव्ही जॉईंट(Tripod CV Joint )"
+  },
+  "Turbocharger": {
+    "ta": "டர்போசார்ஜர்",
+    "hi": "टर्बोचार्जर(Turbocharger )"
+  },
+  "U-Joints": {
+    "ta": "யு-ஜாயிண்ட்ஸ்",
+    "hi": "यू-जॉईंट्स(U-Joints )"
+  },
+  "Vacuum Advance": {
+    "ta": "வாக்யூம் அட்வான்ஸ்",
+    "hi": "व्हॅक्यूम ॲडव्हान्स(Vacuum Advance )"
+  },
+  "Vacuum Booster": {
+    "ta": "வாக்யூம் பூஸ்ட்டர்",
+    "hi": "व्हॅक्यूम बूस्टर(Vacuum Booster )"
+  },
+  "Vacuum Gauge": {
+    "ta": "வாக்யூம் கேஜ்",
+    "hi": "व्हॅक्यूम गॉज(Vacuum Gauge )"
+  },
+  "Valve Face": {
+    "ta": "வால்வ் ஃபேஸ்",
+    "hi": "वॉल्व फेस(Valve Face )"
+  },
+  "Valve Grinding": {
+    "ta": "வால்வ் கிரைன்டிங்",
+    "hi": "वॉल्व ग्राइंडिंग(Valve Grinding )"
+  },
+  "Valve Guide": {
+    "ta": "வால்வ் கயிட்",
+    "hi": "वॉल्व गाईड (Valve Guide )"
+  },
+  "Valve Lash": {
+    "ta": "வால்வ் லாஷ்",
+    "hi": "वॉल्व लॅश(Valve Lash )"
+  },
+  "Valve Overlap": {
+    "ta": "வால்வ் ஓவர்லாப்",
+    "hi": "वॉल्व्ह कव्हर(Valve Overlap )"
+  },
+  "Valve Spring": {
+    "ta": "வால்வ் ஸ்ப்ரிங்",
+    "hi": "वॉल्व स्प्रिंग(Valve Spring )"
+  },
+  "Valve Stem Seal": {
+    "ta": "வால்வ் ஸ்டெம் சீல்",
+    "hi": "वॉल्व स्टेम सील(Valve Stem Seal )"
+  },
+  "Valve Stem": {
+    "ta": "வால்வ் ஸ்டெம்",
+    "hi": "वॉल्व स्टेम(Valve Stem )"
+  },
+  "Valve Timing": {
+    "ta": "வால்வ் டைமிங்",
+    "hi": "वॉल्व टाइमिंग(Valve Timing )"
+  },
+  "Valve": {
+    "ta": "வால்வ்",
+    "hi": "झडप(Valve )"
+  },
+  "Valvetrain": {
+    "ta": "வால்வ்ட்ரெயின்",
+    "hi": "वॉल्वट्रेन (Valvetrain )"
+  },
+  "Vapor Lock": {
+    "ta": "வேப்பர் லாக்",
+    "hi": "वेपर लॉक(Vapor Lock )"
+  },
+  "Variable Valve Timing": {
+    "ta": "வேரியபிள் வால்வ் டைமிங்ஸ்",
+    "hi": "व्हेरिएबल  वॉल्व टाइमिंग(Variable Valve Timing )"
+  },
+  "V-Belt": {
+    "ta": "வி-பெல்ட்",
+    "hi": "व्ही-बेल्ट(V-Belt )"
+  },
+  "Vehicle Speed Sensor": {
+    "ta": "வெஹிகிள் ஸ்பீட் சென்சார்",
+    "hi": "व्हेईकल स्पीड सेन्सर(Vehicle Speed Sensor )"
+  },
+  "VIN (Vehicle Identification Number)": {
+    "ta": "வி.ஐ.என் (வெஹிகள் ஐடெண்டிபிகேஷன் நம்பர்)",
+    "hi": "व्हीआयएन (व्हेईकल आयडेंटिफिकेशन नंबर)(VIN (Vehicle Identification Number) )"
+  },
+  "Viscosity": {
+    "ta": "விஸ்காசிட்டி",
+    "hi": "विस्कॉसिटी(Viscosity )"
+  },
+  "Voltmeter": {
+    "ta": "வோல்ட்மீட்டர்",
+    "hi": "व्होल्टमीटर(Voltmeter )"
+  },
+  "Volts": {
+    "ta": "வோல்ட்ஸ்",
+    "hi": "व्होल्ट्स(Volts )"
+  },
+  "Warranty": {
+    "ta": "வாரண்ட்டி",
+    "hi": "वॉरंटी(Warranty )"
+  },
+  "Waste Gate": {
+    "ta": "வேஸ்ட் கேட்",
+    "hi": "वेस्ट गेट(Waste Gate )"
+  },
+  "Water Pump": {
+    "ta": "வாட்டர் பம்ப்",
+    "hi": "वॉटर पंप(Water Pump )"
+  },
+  "Wheel Balancing": {
+    "ta": "வீல் பேலன்ஸிங்",
+    "hi": "व्हील बॅलेंसिंग(Wheel Balancing )"
+  },
+  "Wheel Bearing": {
+    "ta": "வீல் பியரிங்",
+    "hi": "व्हील बियरिंग(Wheel Bearing)"
+  },
+  "Wheel Cylinder": {
+    "ta": "வீல் சிலின்டர்",
+    "hi": "व्हील सिलेंडर(Wheel Cylinder )"
+  },
+  "Wheel Runout": {
+    "ta": "வீல் ரன்னவுட்",
+    "hi": "व्हील रनआउट(Wheel Runout )"
+  },
+  "Wheel Speed Sensor": {
+    "ta": "வீல் ஸ்பீட் சென்சார்",
+    "hi": "व्हील स्पीड सेन्सर(Wheel Speed Sensor )"
+  },
+  "Wheelbase": {
+    "ta": "வீல்பேஸ்",
+    "hi": "व्हीलबेस(Wheelbase )"
+  },
+  "Wiring Harness": {
+    "ta": "வயரிங் ஹார்னெஸ்",
+    "hi": "वायरिंग हार्नेस(Wiring Harness )"
+  },
+  "anti-roll bar": {
+    "ta": "ஆன்டி-ரோல் பார்",
+    "hi": "एंटी-रोल बार"
+  },
+  "Anticlockwise": {
+    "ta": "ஆன்டி-க்லாக்வைஸ்",
+    "hi": "एंटी-क्लॉकवाइज़"
+  },
+  "Assembly": {
+    "ta": "அசெம்ப்ளி",
+    "hi": "असेंबली"
+  },
+  "backlash": {
+    "ta": "பாக்லாஷ்",
+    "hi": "बैकलैश"
+  },
+  "ball joint": {
+    "ta": "பால் ஜாயிண்ட்",
+    "hi": "बॉल जॉइंट"
+  },
+  "black smoke": {
+    "ta": "பிளாக் ஸ்மோக்",
+    "hi": "ब्लैक स्मोक"
+  },
+  "bleeding": {
+    "ta": "ப்ளீடிங்",
+    "hi": "ब्लीडिंग"
+  },
+  "Block": {
+    "ta": "பிளாக்",
+    "hi": "ब्लॉक"
+  },
+  "boost pressure": {
+    "ta": "பூஸ்ட் பிரஷர்",
+    "hi": "बूस्ट प्रेशर"
+  },
+  "boost pressure sensor": {
+    "ta": "பூஸ்ட் பிரஷர் சென்சர்",
+    "hi": "बूस्ट प्रेशर सेंसर"
+  },
+  "boost temperature": {
+    "ta": "பூஸ்ட் டெம்பரேச்சர்",
+    "hi": "बूस्ट टेम्परेचर"
+  },
+  "bottom up Cooling": {
+    "ta": "பாட்டம் அப் கூலிங்",
+    "hi": "बॉटम अप कूलिंग"
+  },
+  "bypass filter": {
+    "ta": "பைபாஸ் ஃபில்டர்",
+    "hi": "बायपास फ़िल्टर"
+  },
+  "Cable Harness": {
+    "ta": "கேபிள் ஹார்னஸ்",
+    "hi": "केबल हार्नेस"
+  },
+  "CAM Shaft": {
+    "ta": "காம் ஷாஃப்ட்",
+    "hi": "कैम शाफ्ट"
+  },
+  "catalytic convertor": {
+    "ta": "காடலிட்டிக் கன்வெர்ட்டர்",
+    "hi": "कैटेलिटिक कनवर्टर"
+  },
+  "Clcokwise": {
+    "ta": "க்லாக்வைஸ்",
+    "hi": "क्लॉकवाइज़"
+  },
+  "Click Sound": {
+    "ta": "கிளிக் சவுண்ட்",
+    "hi": "क्लिक साउंड"
+  },
+  "Clutch Booster": {
+    "ta": "கிளட்ச் பூஸ்டர்",
+    "hi": "क्लच बूस्टर"
+  },
+  "Compression pressure": {
+    "ta": "கம்ப்ரெஷன் பிரஷர்",
+    "hi": "कंप्रेशन प्रेशर"
+  },
+  "Counterclockwise": {
+    "ta": "கவுண்டர்-க்லாக்வைஸ்",
+    "hi": "काउंटर-क्लॉकवाइज़"
+  },
+  "crane": {
+    "ta": "கிரேன்",
+    "hi": "क्रेन"
+  },
+  "Crankshaft pulley": {
+    "ta": "கிராங்க்ஷாஃப்ட் புல்லி",
+    "hi": "क्रैंकशाफ्ट पुली"
+  },
+  "Disassembly": {
+    "ta": "டிசசெம்ப்ளி",
+    "hi": "डिसअसेंबली"
+  },
+  "Dosing Pump": {
+    "ta": "டோசிங் பம்ப்",
+    "hi": "डोज़िंग पम्प"
+  },
+  "dowel sleeves": {
+    "ta": "டௌவல் ஸ்லீவ்ஸ்",
+    "hi": "डॉवेल स्लीव्स"
+  },
+  "drain plug": {
+    "ta": "ட்ரெய்ன் பிளக்",
+    "hi": "ड्रेन प्लग"
+  },
+  "end play": {
+    "ta": "எண்டு ப்ளே",
+    "hi": "एंड प्ले"
+  },
+  "Engine Controls": {
+    "ta": "எஞ்சின் கண்ட்ரோல்ஸ்",
+    "hi": "इंजन कंट्रोल्स"
+  },
+  "Engine Hunting": {
+    "ta": "எஞ்சின் ஹன்டிங்",
+    "hi": "इंजन हंटिंग"
+  },
+  "Filter": {
+    "ta": "ஃபில்டர்",
+    "hi": "फ़िल्टर"
+  },
+  "flange bolt": {
+    "ta": "ஃபிளாஞ் போல்ட்",
+    "hi": "फ्लैंज बोल्ट"
+  },
+  "flywheel housing": {
+    "ta": "ஃப்ளைவீல் ஹௌசிங்",
+    "hi": "फ्लाईव्हील हाउसिंग"
+  },
+  "Fuel Gauge": {
+    "ta": "ஃப்யூவல் கேஜ்",
+    "hi": "फ्यूल गेज"
+  },
+  "gear housing": {
+    "ta": "கியர் ஹௌசிங்",
+    "hi": "गियर हाउसिंग"
+  },
+  "hazard warning": {
+    "ta": "ஹஸார்ட் வார்னிங்",
+    "hi": "हैज़र्ड वार्निंग"
+  },
+  "Head Assembly": {
+    "ta": "ஹெட் அசெம்ப்ளி",
+    "hi": "हेड असेंबली"
+  },
+  "inlet  manifold": {
+    "ta": "இன்லெட் மேனிஃபோல்ட்",
+    "hi": "इनलेट मैनिफोल्ड"
+  },
+  "lifting jig": {
+    "ta": "லிப்டிங் ஜிக்",
+    "hi": "लिफ्टिंग जिग"
+  },
+  "lifting plate": {
+    "ta": "லிப்டிங் ப்ளேட்",
+    "hi": "लिफ्टिंग प्लेट"
+  },
+  "Lubricate with Grease": {
+    "ta": "கிரீஸ் கொண்டு லூப்ரிகேட்",
+    "hi": "ग्रीस से ल्युब्रिकेट"
+  },
+  "Lubricate with Oil": {
+    "ta": "ஆயில் கொண்டு லூப்ரிகேட்",
+    "hi": "ऑयल से ल्युब्रिकेट"
+  },
+  "Lubrication Points": {
+    "ta": "லூப்ரிகேஷன் பொயிண்ட்ஸ்",
+    "hi": "ल्युब्रिकेशन पॉइंट्स"
+  },
+  "mounting bolts": {
+    "ta": "மவுண்டிங் போல்ட்ஸ்",
+    "hi": "माउंटिंग बोल्ट्स"
+  },
+  "mounting brackets": {
+    "ta": "மவுண்டிங் பிராக்கெட்ஸ்",
+    "hi": "माउंटिंग ब्रैकेट्स"
+  },
+  "Multi-groove cotters": {
+    "ta": "மல்டி-க்ரூவ் கட்டர்ஸ்",
+    "hi": "मल्टी-ग्रूव कॉटर्स"
+  },
+  "Odometer": {
+    "ta": "ஓடோமீட்டர்",
+    "hi": "ओडोमीटर"
+  },
+  "oil strainer": {
+    "ta": "ஆயில் ஸ்ட்ரெய்னர்",
+    "hi": "ऑयल स्ट्रेनर"
+  },
+  "overhauling": {
+    "ta": "ஓவர்ஹாலிங்",
+    "hi": "ओवरहॉलिंग"
+  },
+  "Piston Pin": {
+    "ta": "பிஸ்டன் பின்",
+    "hi": "पिस्टन पिन"
+  },
+  "pneumatic connections": {
+    "ta": "நியூமாட்டிக் கனெக்ஷன்ஸ்",
+    "hi": "न्यूमैटिक कनेक्शन्स"
+  },
+  "Power Cylinder": {
+    "ta": "பவர் சிலிண்டர்",
+    "hi": "पावर सिलिंडर"
+  },
+  "Pre Loading": {
+    "ta": "ப்ரீ லோடிங்",
+    "hi": "प्री लोडिंग"
+  },
+  "Priming": {
+    "ta": "ப்ரைமிங்",
+    "hi": "प्राइमिंग"
+  },
+  "reboring": {
+    "ta": "ரீபோரிங்",
+    "hi": "रिबोरिंग"
+  },
+  "Reduction Gear": {
+    "ta": "ரெடக்ஷன் கியர்",
+    "hi": "रिडक्शन गियर"
+  },
+  "Regeneration": {
+    "ta": "ரீஜெனரேஷன்",
+    "hi": "रीजेनेरेशन"
+  },
+  "Snap Ring": {
+    "ta": "ஸ்னாப் ரிங்",
+    "hi": "स्नैप रिंग"
+  },
+  "Special Tools": {
+    "ta": "ஸ்பெஷல் டூல்ஸ்",
+    "hi": "स्पेशल टूल्स"
+  },
+  "Speedometer": {
+    "ta": "ஸ்பீடோமீட்டர்",
+    "hi": "स्पीडोमीटर"
+  },
+  "Standard Tool": {
+    "ta": "ஸ்டாண்டர்ட் டூல்",
+    "hi": "स्टैंडर्ड टूल"
+  },
+  "tensioner pulley through the V-belt": {
+    "ta": "வி-பெல்ட் வழியாக டென்ஷனர் புல்லி",
+    "hi": "वी-बेल्ट से होकर टेंशनर पुली"
+  },
+  "transmission trolley": {
+    "ta": "டிரான்ஸ்மிஷன் ட்ராலி",
+    "hi": "ट्रांसमिशन ट्रॉली"
+  },
+  "Turning Circle Dia": {
+    "ta": "டர்னிங் சர்கிள் டையா",
+    "hi": "टर्निंग सर्कल डाया"
+  },
+  "valve clearance": {
+    "ta": "வால்வ் கிளியரன்ஸ்",
+    "hi": "वाल्व क्लियरेंस"
+  },
+  "vibration": {
+    "ta": "வைப்ரேஷன்",
+    "hi": "वाइब्रेशन"
+  },
+  "accumulator": {
+    "hi": "अच्चुमुलतोर्",
+    "ta": "அச்சுமுலதோர்"
+  },
+  "Selector": {
+    "hi": "सेलेच्तोर्",
+    "ta": "ஸேலேச்தோர்"
+  },
+  "Engage": {
+    "hi": "एन्गेज्",
+    "ta": "ஏந்கேஜ்"
+  },
+  "Reassembly": {
+    "hi": "रेअस्सेम्ब्ली",
+    "ta": "ரேஅஸ்ஸேம்ப்லீ"
+  }
+}

@@ -13,18 +13,25 @@ def translate_sentences(sentences: List[str], target_lang: str, fast_mode: bool 
     # Hindi: hin_Deva
     
     code_map = {
-        'tamil': 'tam_Taml',
-        'ta': 'tam_Taml',
-        'hindi': 'hin_Deva',
-        'hi': 'hin_Deva'
+        'tamil':  'tam_Taml',
+        'ta':     'tam_Taml',
+        'hindi':  'hin_Deva',
+        'hi':     'hin_Deva',
+        'malay':  'zsm_Latn',
+        'ms':     'zsm_Latn',
+        'bahasa': 'zsm_Latn',
     }
-    
+
     key = target_lang.lower()
-    target_code = code_map.get(key, 'tam_Taml') # Default to Tamil
-    
-    # Check if key not found but contains 'hindi' or 'tamil'
-    if key not in code_map:
-        if 'hindi' in key: target_code = 'hin_Deva'
-        elif 'tamil' in key: target_code = 'tam_Taml'
+
+    # Check contains — handles "Bahasa Malaysia", "Bahasa Melayu" etc.
+    if 'malay' in key or 'bahasa' in key or key == 'ms':
+        target_code = 'zsm_Latn'
+    elif 'hindi' in key:
+        target_code = 'hin_Deva'
+    elif 'tamil' in key:
+        target_code = 'tam_Taml'
+    else:
+        target_code = code_map.get(key, 'zsm_Latn')  # default to Malay not Tamil
     
     return translate_batch(sentences, target_code, fast_mode=fast_mode, num_beams=num_beams)

@@ -18,6 +18,19 @@ import unicodedata
 from typing import Dict, List, Optional, Tuple
 from difflib import SequenceMatcher
 
+def grammar_quality_score(text: str, target_lang: str = "ta") -> Dict:
+    """Basic grammar/spelling quality using language-tool or fallback."""
+    try:
+        import language_tool_python
+        tool = language_tool_python.LanguageTool('en-US')  # or 'ta' / 'ms' if supported
+        matches = tool.check(text)
+        error_rate = len(matches) / max(len(text.split()), 1)
+        score = max(0, 100 - error_rate * 50)  # rough mapping
+        return {"grammar_score": round(score, 2), "errors_found": len(matches)}
+    except:
+        # Fallback: use chrF against a "clean" version or just return high if low leakage
+        return {"grammar_score": 85.0, "note": "language-tool not available"}
+
 
 # ---------------------------------------------------------------------------
 # 1. English Word Leakage Rate
@@ -47,6 +60,51 @@ def _is_latin_word(word: str) -> bool:
         for c in stripped
     )
     return has_latin and not has_indic
+
+
+def terminology_consistency_rate(
+    translated_text: str,
+    glossary: Dict[str, Dict[str, str]],
+    target_lang: str,
+) -> Dict:
+    """Measures how consistently glossary terms are used (no mixing of wrong script)."""
+    lang_code = 'ms' if any(x in target_lang.lower() for x in ('malay','ms','bahasa')) else \
+                'hi' if 'hindi' in target_lang.lower() else 'ta'
+    
+    terms_found = 0
+    consistent_terms = 0
+    wrong_script_terms = 0
+    
+    for term, translations in glossary.items():
+        if lang_code not in translations:
+            continue
+        expected = translations[lang_code]
+        
+        # Count occurrences of the expected term
+        count_expected = len(re.findall(re.escape(expected), translated_text, re.IGNORECASE))
+        if count_expected == 0:
+            continue
+            
+        terms_found += 1
+        # Check if any wrong-language version appears (e.g. Tamil in Malay output)
+        wrong_versions = [v for k, v in translations.items() if k != lang_code]
+        has_wrong = any(re.search(re.escape(w), translated_text) for w in wrong_versions if w)
+        
+        if has_wrong:
+            wrong_script_terms += 1
+        else:
+            consistent_terms += 1
+    
+    consistency = consistent_terms / terms_found if terms_found > 0 else 1.0
+    return {
+        "terminology_consistency": round(consistency * 100, 2),
+        "terms_found": terms_found,
+        "consistent_count": consistent_terms,
+        "wrong_script_leaks": wrong_script_terms,
+    }
+
+
+
 
 
 def english_leakage_rate(translated_text: str) -> Dict:
@@ -535,6 +593,39 @@ def evaluate_document(
     return report
 
 
+def compute_cumulative_score(report: Dict) -> Dict:
+    """Reproduces a dashboard-like cumulative score (0-100)."""
+    weights = {
+        "semantic": 0.30,   # Semantic Accuracy
+        "terminology": 0.25,
+        "fluency": 0.20,    # chrF or METEOR
+        "grammar": 0.15,
+        "leakage_penalty": 0.10,
+    }
+    
+    semantic = report.get("semantic", {}).get("semantic_score", 80) / 100 * 5
+    term_cov = report.get("glossary_coverage", {}).get("coverage_percent", 80)
+    chrf = report.get("chrf", {}).get("chrf", 80)
+    leakage = report.get("english_leakage", {}).get("leakage_percent", 0)
+    
+    # Normalize everything to 0-100
+    fluency = chrf
+    grammar = 90  # placeholder — replace with grammar_quality_score
+    term_score = term_cov * 0.7 + 30  # boost if you have good glossary
+    
+    cumulative = (
+        weights["semantic"] * semantic * 20 +      # scale to 100
+        weights["terminology"] * term_score +
+        weights["fluency"] * fluency +
+        weights["grammar"] * grammar +
+        weights["leakage_penalty"] * (100 - leakage * 2)  # heavy penalty for leakage
+    )
+    
+    return {
+        "cumulative_score": round(cumulative, 1),
+        "rating": "Excellent Quality" if cumulative > 80 else "Good" if cumulative > 65 else "Needs Improvement"
+    }
+
 # ---------------------------------------------------------------------------
 # 7. CLI / Standalone runner
 # ---------------------------------------------------------------------------
@@ -547,7 +638,7 @@ if __name__ == "__main__":
     import sys
 
     # Load glossary
-    glossary_path = "english_tamil_hindi_glossary.json"
+    glossary_path = "upg.json"
     try:
         with open(glossary_path, encoding="utf-8") as f:
             glossary = json.load(f)

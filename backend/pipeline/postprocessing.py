@@ -94,6 +94,7 @@ def restore_placeholders(translated_text: str, placeholder_map: Dict[str, str], 
     # to avoid applying the WRONG language's fallback.
     has_tamil = any('\u0B80' <= c <= '\u0BFF' for c in restored_text)
     has_devanagari = any('\u0900' <= c <= '\u097F' for c in restored_text)
+    has_malay = not has_tamil and not has_devanagari  # Latin script = Malay or English
     
     # Hindi fallback
     hindi_fallback = {
@@ -119,14 +120,28 @@ def restore_placeholders(translated_text: str, placeholder_map: Dict[str, str], 
         "is also described in": "இதிலும் விவரிக்கப்பட்டுள்ளது",
         "length": "நீளம்", "Relief": "ரிலீஃப்",
     }
+
+    malay_fallback = {
+        "strainer": "penapis", "bolt": "bolt", "nut": "kacang", "bracket": "pendakap",
+        "washer": "mesin basuh", "screw": "skru", "stand": "pendirian", "plug": "palam",
+        "housing": "perumahan", "gasket": "gasket", "seal": "meterai",
+        "and Equipment": "dan Peralatan", "and": "dan",
+        "Removal and Installation": "Pembuangan dan Pemasangan",
+        "Removal and": "Pembuangan dan", "Note": "Nota",
+        "Required service material": "Bahan servis yang diperlukan",
+        "is also described in": "juga diterangkan dalam",
+        "length": "panjang", "Relief": "pelepasan",
+    }
     
     # Pick the right map based on script detected in the text
     if has_tamil:
         active_fallback = tamil_fallback
     elif has_devanagari:
         active_fallback = hindi_fallback
+    elif has_malay:
+        active_fallback = malay_fallback
     else:
-        active_fallback = {}  # Pure English or unknown → skip
+        active_fallback = {}
     
     # Sort by key length (longest first) to avoid partial replacement
     sorted_terms = sorted(active_fallback.keys(), key=len, reverse=True)

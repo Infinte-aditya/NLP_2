@@ -1,0 +1,78 @@
+{
+  "overall_score": 54.1,
+  "rating": "Poor — Needs Revision",
+  "target_lang": "Malay",
+  "semantic_accuracy": 78.84,
+  "terminology": {
+    "terminology_score": 11.1,
+    "terms_checked": 389,
+    "terms_found": 43,
+    "wrong_script_leaks": 0,
+    "missing_terms": [
+      "Air Bag",
+      "Air Conditioning",
+      "Air/Fuel Ratio",
+      "Alignment",
+      "Alternating Current",
+      "Alternator",
+      "Antifreeze",
+      "Backfire",
+      "Backing Plate",
+      "Backpressure",
+      "Balance Shaft",
+      "Barometric Pressure Sensor",
+      "Battery Cables",
+      "Battery Terminals",
+      "Bleeder Hose"
+    ]
+  },
+  "fluency": {
+    "fluency_score": 95.1,
+    "malay_word_density": 40.2,
+    "function_word_density": 14.6,
+    "avg_sentence_length": 6.1,
+    "sentence_count": 3363
+  },
+  "leakage": {
+    "leakage_percent": 40.34,
+    "leaked_words": [
+      "Transaxle.",
+      "auTransaxle.",
+      "Langkah-langkah",
+      "masalah.",
+      "baca",
+      "Buku",
+      "Panduan",
+      "Operator",
+      "cara",
+      "kawalan",
+      "gear",
+      "automatik.",
+      "pilih",
+      "sumbu",
+      "Clutch",
+      "bahagian",
+      "Bahagian",
+      "Transaxle",
+      "aTransaxle",
+      "KomunikasiControl",
+      "lain",
+      "CAN.",
+      "Gear",
+      "Otomatik.",
+      "auTransaxle"
+    ],
+    "total_words": 20603,
+    "leakage_score": 0.0
+  },
+  "coverage": {
+    "coverage_score": 100.0,
+    "length_ratio": 0.886,
+    "source_words": 23258,
+    "translated_words": 20603
+  },
+  "recommendations": [
+    "Terminology coverage is weak (43/389 terms matched). Expand the glossary or post-edit missing terms: Air Bag, Air Conditioning, Air/Fuel Ratio, Alignment, Alternating Current",
+    "High English leakage (40.3%). Likely untranslated segments — add to MALAY_TECH_WHITELIST if intentional, or fix translation prompts. Sample: Transaxle., auTransaxle., Langkah-langkah, masalah., baca, Buku, Panduan, Operator"
+  ]
+}

@@ -23,7 +23,7 @@ from docx2pdf import convert as docx2pdf_convert
 # Glossary lives at project root (one level above backend/)
 GLOSSARY_PATH = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-    "english_tamil_hindi_glossary.json"
+    "upg.json"
 )
 
 # Single updater instance — shared across all requests
@@ -66,7 +66,15 @@ def make_translation_helper(target_lang: str, is_docx: bool = False):
     Returns a translation_helper function configured for the given language.
     This is what gets passed to translate_docx() and translate_xml().
     """
-    tgt_script = "hi" if "hindi" in target_lang.lower() else "ta"
+    target_lower = target_lang.lower()
+
+    if 'hindi' in target_lower:
+        tgt_script = "hi"
+    elif any(x in target_lower for x in ("malay", "ms", "bahasa", "zsm")):
+        tgt_script = "ms"
+    else:
+        tgt_script = "ta"
+
 
     def translation_helper(sentences, lang, progress_callback=None):
 
@@ -133,14 +141,14 @@ def make_translation_helper(target_lang: str, is_docx: bool = False):
                         restored, protected_glossary
                     )
 
-                    restored, new_terms = updater.process(
-                        restored, tgt_script=tgt_script
-                    )
 
-                    if new_terms:
-                        full_glossary = load_glossary(GLOSSARY_PATH)
-                        protected_glossary, _ = classify_terms(full_glossary, target_lang)
-                        print(f"[Pipeline] Glossary updated: {new_terms}")
+                    is_malay = tgt_script == "ms"
+                    if not is_malay:
+                        restored, new_terms = updater.process(restored, tgt_script=tgt_script)
+                        if new_terms:
+                            full_glossary = load_glossary(GLOSSARY_PATH)
+                            protected_glossary, _ = classify_terms(full_glossary, target_lang)
+                            print(f"[Pipeline] Glossary updated: {new_terms}")
 
                     final_sentences[original_idx] = restored
 
